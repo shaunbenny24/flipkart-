@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:  #e4e7ed;
+}
+.flex{
+    display: flex;
+    gap: 100px;
+    
+}
+.division{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#change{
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px 16px;
+    color: #2874f0;
+}
+.pro{
+    font-size: 14px;
+    color: #212121;
+    line-height: 1.4;
+}
+.cor{
+    border-top: 1px dashed #e0e0e0;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 20px 0px;
+    
+}
+#gol{
+    border-top: 1px dashed #e0e0e0;
+    padding: 12px 0;
+    font-size: 16px
+}
+#gol p{
+    color: #388e3c;
+}
+.numb{
+    padding-left: 50px;
+}
+.numb1{
+    padding-left: 10px;
+}
+.w3{
+     
+    border-bottom: 1px solid black;
+    font-size: var(--font-size-16);    
+  
+}
+    
+
+.home{
+    margin-top: 20px;
+    
+}.cel{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px 60px;
+    width: 700px;
+}
+.detail{
+    background-color: white;
+    padding: 40px;
+    max-width: 100%;
+    
+}
+#h{
+    background-color: #f0f2f5;
+    margin: 0 0 0 12px;
+    color: #717478;
+    font-size: 10px;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+   
+a{
+    text-decoration: none;
+}
+#G{
+    color: black;
+    
+}
+
+
+
+
+
+
+
+
+
