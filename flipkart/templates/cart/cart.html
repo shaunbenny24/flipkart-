@@ -1,12 +1,318 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>
+    <title>Flipcart</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/729/PNG/512/flipkart_icon-icons.com_62718.png">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <!-- bootstrap css only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/95070c6490.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'cartstyle.css' %}">
+
 </head>
 <body>
-    <header></header>
+   <!-- header -->
+   <header>
+    <!-- lg screen -->
+    <div class="bkd_color fixed-top">
+      <div class="container d-none d-lg-block fw-semibold ">
+        <div class="d-flex justify-content-evenly p-2">
+           
+            <div class="search_bar d-flex">
+                <div class="logo_group me-3">
+                    <img width="80rem;" src="{% static 'img/home/flipkart-plus_8d85f4.png' %}" alt="">
+                    <div class="text">Explore <span style="color: #ffe500;">Plus</span>
+                        <img width="12rem;" src="{% static 'img/home/plus_aef861.png' %}" alt="">
+                    </div>
+                </div>
+                <div>
+                    <form action="">
+                        <div style="position: relative;"><input type="text" class="rounded-0" placeholder="Search for products, brands and more">
+                        <div style="position: absolute;
+                        left: 24rem;
+                        bottom: 7px;"><i class="fa-solid fa-magnifying-glass text-primary"></i></div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Button trigger modal -->
+            <!-- <div class="mt-"><button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">My Account</button></div> -->
+            <!-- <div class="mt-2 text-white">Become a Seller</div>
+            <div class="mt-2 text-white">More</div>
+            <div class="mt-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Cart</div>
+        </div> -->
+    </div>
+    </div>
+
+    
+  
+  <!--login Modal -->
+  <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body p-0" >
+        <div class="row">
+            <div class="col-4 bkd_color">
+                <div class="container">
+                    <div class="mt-5 text-white">
+                        <h3>Login</h3>
+                    <p>Get access to your Orders, Wishlist and  Recommendations</p>
+                    </div>
+                    <div class="mt-5">
+                        <img src="{%static 'img/home/login_img_c4a81e.png'%}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="container">
+                    <form class="loginform" action="">
+                        <div class="mt-5">
+                            <input  type="text" placeholder="Enter Email/Mobile Number">
+                        </div>
+                        <div class="mt-5">
+                            <input  type="text" placeholder="Enter Password">
+                        </div>
+                        <div class="mt-5">
+                            <p><span class="text-secondary">By continuing, you agree to Flipkart's</span> <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
+                        </div>
+                        <div class="mt-5 mb-4">
+                            <button>Login</button>
+                        </div>
+                        <div class="mt-5 mb-4 text-center">
+                            <a  class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" href="">New to Flipkart? Create an account</a>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- signup modal -->
+  <div  class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body p-0" >
+        <div class="row">
+            <div class="col-4 bkd_color">
+                <div class="container">
+                    <div class="mt-5 text-white">
+                        <h3>Looks like you're new here!</h3>
+                    <p>Sign up with your mobile number to get started</p>
+                    </div>
+                    <div class="mt-5">
+                        <img src="{%static 'img/home/login_img_c4a81e.png'%}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="container">
+                    <form class="loginform" action="">
+                        <div class="mt-5">
+                            <input  type="text" placeholder="Enter Mobile Number">
+                        </div>
+                        <!-- <div class="mt-5">
+                            <input  type="text" placeholder="Enter Password">
+                        </div> -->
+                        <div class="mt-5">
+                            <p><span class="text-secondary">By continuing, you agree to Flipkart's</span> <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
+                        </div>
+                        <div class="mt-5 mb-4">
+                            <button>CONTINUE</button>
+                        </div>
+                        <div class="mt-5 mb-4 text-center">
+                            <a href="">New to Flipkart? Create an account</a>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+    <!-- end lg screen -->
+
+    <!-- md screen -->
+    <nav class="navbar resp-nav bkd_color fixed-top d-lg-none">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon ">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </span>
+              </button>
+              <div class="logo_group me-auto">
+                <img width="80rem;" src="{% static 'img/home/flipkart-plus_8d85f4.png' %}" alt="">
+                <div class="text">Explore <span style="color: #ffe500;">Plus</span>
+                    <img width="12rem;" src="{% static 'img/home/plus_aef861.png' %}" alt="">
+                </div>
+            </div>
+            <a href=""><i class="fa-solid fa-cart-shopping me-4 text-white"></i></a>
+          <a class="navbar-brand text-white fw-lighter" href="#">Login</a>
+         
+          <!-- off canvas -->
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header bkd_color">
+              <div class="offcanvas-title d-flex p-1" id="offcanvasNavbarLabel">
+               <div class="text-white"> <i class="fa-solid fa-user"></i></div>
+               <div class="me-5 ms-2 pe-5 text-white"> Login & Signup</div>
+               <div class="ms-5 ps-5"><img width="20px;" style="border-radius: 50%;" src="{%static 'img/home/index.png' %}" alt=""></div>
+              </div>
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">
+                    All Categories
+                  </a>
+                </li>
+                <div class="h_line"></div>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">My Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Cart</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">My Account</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <div class="h_line"></div>
+              </ul>
+             
+            </div>
+          </div>
+        <!-- end offcanvas -->
+
+        </div>
+       <div class="container-fluid mt-3">
+        <div class="search_bar2 ">
+            <form action="">
+                <div style="position: relative;"><input type="text" class="rounded-0" placeholder="Search for products, brands and more">
+                <div style="position: absolute;
+                left: 10px;
+                bottom: 7px;"><i class="fa-solid fa-magnifying-glass text-secondary"></i></div>
+            </div>
+            </form>
+          </div> 
+       </div>
+      </nav>
+      <!-- end md screen -->
+   </header>
+   <section class="division container">
+    <div>
+        <div class="cart">
+            <div>
+                <a href="">Flipkart(1)</a>
+            </div>
+            <div>
+                <a href="" id="G">Grocery</a>
+            </div>
+        </div>
+        <div class="home">
+            <div class="cel">
+                <div>
+                    <p>Deliver to:<b>Kunjumuhamed TA 680123</b> <span id="h">Home</span></p>
+                    <p>127 D Tharupeedkayil, P.O Konathakunnu</p>
+                </div>
+                <div>
+                    <button id="change">Change</button>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div>
+            <div>
+                <img src="{% static 'images/src.png' %}">
+            </div>
+        </div> 
+        
+    </div>
+    <div>
+        <div class="detail">
+            <div class="w3">
+                <div class="pro">
+                    <p>PRICE DETAILS</p>
+                </div>
+            </div>
+            
+            <div class="flex">
+                <div>
+                    <p>Price (1 item)</p>
+                </div>
+                <div class="numb1">
+                    ₹1,28,990
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <p>Discount</p>
+                </div>
+                <div class="numb">
+                    - ₹42,991
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <p>Delivery Charges</p>
+                </div>
+                <div class="numb1">
+                    <p>Free</p>
+                </div>
+            </div>
+            <div class="flex cor">
+                <div>
+                    <b>Total Amount</b>
+                </div>
+                <div class="numb1">
+                    ₹85,999
+                </div>
+            </div>
+            <div id="gol">
+                <p>You will save ₹42,991 on this order</p>
+            </div>
+            
+        </div>
+    </div>
+          
+        
+    
+   </section>
+
+   
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </body>
 </html>
