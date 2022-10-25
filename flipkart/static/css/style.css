@@ -1,0 +1,132 @@
+/* home page */
+* {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+.bkd_color {
+    background-color: #2874F0;
+}
+
+.normal_color {
+    color: #2874F0;
+}
+
+header {
+    background-color: #2874F0;
+    width: 100%;
+    height: 55px;
+}
+
+.logo_group .text {
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: italic;
+    color: white;
+    font-family: system-ui;
+}
+
+.search_bar input {
+    width: 26rem;
+    background: white;
+    border: none;
+    padding: 7px 15px;
+
+}
+
+.search_bar2 {
+    width: 100%;
+}
+
+.search_bar2 input {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 7px 40px;
+
+}
+
+header button {
+    background: white;
+    border: none;
+    padding: 6px 41px 6px;
+    color: #2874F0;
+}
+
+.navbar .navbar-toggler:focus {
+    color: transparent;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: none;
+}
+
+.h_line {
+    width: 125%;
+    height: 1px;
+    background: #bbb;
+    margin-left: -17px;
+}
+
+.offcanvas-body li {
+    font-size: 14px;
+}
+
+.loginform input {
+    width: 100%;
+    border-bottom: 1px solid #2874F0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.loginform p {
+    font-size: 12px;
+}
+
+.loginform button {
+    width: 100%;
+background: #fb641b;
+color: white;
+height: 50px;
+border-radius: 3px;
+}
+.categories img{
+    width: 4rem;
+    height: 4rem;
+}
+.categories a{
+    color: black;
+    text-decoration: none;
+}
+@media (max-width: 992px) { 
+    .categories{
+        overflow-x: auto;
+        
+    }
+    .categories img{
+        width: 3rem;
+        height: 3rem;
+        margin-top: 2rem;
+    }
+    .categories p{
+        font-size: 12px;
+        margin-right: 12px;
+    }
+}
+.arrow_icon{
+    position: absolute;
+    background: white;
+    height: 45px;
+}
+.rating_tag{
+    background: #388e3c;
+width: 41px;
+border-radius: 4px;
+color: white;
+font-size: 12px;
+}
