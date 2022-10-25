@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<body>
+    <div class="container text-center">
+            <div class="inter bor">
+                <form class="allin boxin" action="" method="POST">
+                    <div class="container bor">
+                        <div>
+                            <b>Personal Information</b>
+                        </div>
+                        <div class="col">
+                            <label for="uname"><b>First Name</b></label>
+                            <input type="text" placeholder="First Name" name="First Name" required>
+        
+                            <label for="uname"><b>Last Name</b></label>
+                            <input type="text" placeholder="Last Name" name="Last name" required>
+        
+                            <p>Your Gender?</p>
+                            <input type="radio" name="gender" value="male"> Male
+                            <input type="radio" name="gender" value="female"> Female
+                        </div>
+                        <div>
+                            <label for="Email"><b>Email Address</b></label>
+                            <input type="text" placeholder="Email Address" name="Email Address" required>
+                        </div>
+                        <div>
+                            <label for="number"><b>Mobile Number</b></label>
+                            <input type="text" placeholder="Mobile Number" name="Mobile Number" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <div class="lockb">
+            <div class="bor margin">
+                <div class="col">
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        Hello,
+                    </div>
+                </div>
+                <div><b>name</b></div>
+            </div>
+            <div class="row adj">
+                <div class="bor mar">
+                    <div class="bot">
+                        <div>
+                            <i class="fa-solid fa-boxes-packing"></i><b>MY ORDERS</b>
+                        </div>
+                    </div>
+                    <div class="row bot">
+                        <div class="col">
+                            <div>
+                                <i class="fa-solid fa-user"></i>ACCOUNT SETTINGS
+                            </div>
+                            <div class="all">
+                                <a href="#"><div>Profile Information</div></a>
+                                <a href="#"><div>Manage Address</div></a>
+                                <a href="#"><div>PAN Card information</div></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bot">
+                        <div class="col">
+                            <div>
+                                <i class="fa-solid fa-user"></i>PAYMENTS
+                            </div>
+                            <div class="all">
+                                <a href="#"><div>Gift cards</div></a>
+                                <a href="#"><div>Saved UPI</div></a>
+                                <a href="#"><div>Saved cards</div></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <i class="fa-solid fa-user"></i>MY STUFF
+                            </div>
+                            <div class="all">
+                                <a href="#"><div>My coupons</div></a>
+                                <a href="#"><div>My Reviews & Ratings </div></a>
+                                <a href="#"><div>All Notifications</div></a>
+                                <a href="#"><div>My Wishlist</div></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <div>Logout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

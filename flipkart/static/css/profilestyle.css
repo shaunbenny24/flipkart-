@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto', sans-serif;
+
+}
+.body{
+    background-color: rgb(138, 210, 238);
+}
+
+.bor{
+    background-color: rgb(236, 243, 245);
+}
+.margin{
+    margin-bottom: 20px;
+}
+.bot{
+    border-bottom: 1px solid black;
+}
+.mar{
+    margin-left: 10px;
+}
+.lockb{
+    width: 200px;
+    height: 10px;
+}
+.inter{
+    width: 800px;
+    margin-left: 250px; 
+    height: 10px;
+}
+
+
+
