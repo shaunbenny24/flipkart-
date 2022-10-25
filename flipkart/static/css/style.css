@@ -130,3 +130,25 @@ border-radius: 4px;
 color: white;
 font-size: 12px;
 }
+footer{
+    background-color: #172337;
+    width: 100%;
+}
+footer li, footer a{
+    list-style: none;
+    color: white;
+    font-size: 12px;
+    line-height: 30px;
+    text-decoration: none;
+}
+li p{
+    color: #878787;
+    font-size: 12px;
+}
+.mail_des li{
+    line-height: 20px;
+}
+.bottom_footer p{
+    color: white;
+    font-size: 14px;
+}
