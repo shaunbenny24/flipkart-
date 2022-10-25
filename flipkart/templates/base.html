@@ -46,9 +46,22 @@
             </div>
             <!-- Button trigger modal -->
             <div class="mt-"><button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button></div>
+            <div class="mt-2">
+                <div class="dropdown">
+                    <a class="text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      User
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user text-primary me-4"></i>Profile</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-power-off text-primary me-4"></i>Logout</a></li>
+                     
+                    </ul>
+                  </div>
+            </div>
             <div class="mt-2 text-white">Become a Seller</div>
             <div class="mt-2 text-white">More</div>
-            <div class="mt-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Cart</div>
+            <div class="mt-2 text-white"><i class="fa-solid fa-cart-shopping me-2"></i>Cart</div>
         </div>
     </div>
     </div>
@@ -65,7 +78,7 @@
         </div> -->
         <div class="modal-body p-0" >
         <div class="row">
-            <div class="col-4 bkd_color">
+            <div class="col-lg-4 d-none d-lg-block  bkd_color">
                 <div class="container">
                     <div class="mt-5 text-white">
                         <h3>Login</h3>
@@ -76,7 +89,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-lg-7 col-12">
+                <div class="text-end mt-2">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="container">
                     <form class="loginform" action="">
                         <div class="mt-5">
@@ -113,7 +129,7 @@
         </div> -->
         <div class="modal-body p-0" >
         <div class="row">
-            <div class="col-4 bkd_color">
+            <div class="col-lg-4 d-none d-lg-block bkd_color">
                 <div class="container">
                     <div class="mt-5 text-white">
                         <h3>Looks like you're new here!</h3>
@@ -124,7 +140,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-lg-7 col-12">
+                <div class="text-end mt-2">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="container">
                     <form class="loginform" action="">
                         <div class="mt-5">
@@ -139,9 +158,9 @@
                         <div class="mt-5 mb-4">
                             <button>CONTINUE</button>
                         </div>
-                        <div class="mt-5 mb-4 text-center">
+                        <!-- <div class="mt-5 mb-4 text-center">
                             <a href="">New to Flipkart? Create an account</a>
-                        </div>
+                        </div> -->
                     </form> 
                 </div>
             </div>
@@ -169,8 +188,8 @@
                 </div>
             </div>
             <a href=""><i class="fa-solid fa-cart-shopping me-4 text-white"></i></a>
-          <a class="navbar-brand text-white fw-lighter" href="#">Login</a>
-         
+          <a class="navbar-brand text-white fw-lighter" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+          
           <!-- off canvas -->
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header bkd_color">
@@ -199,7 +218,7 @@
                     <a class="nav-link" href="#">My Account</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Logout</a>
                   </li>
                   <div class="h_line"></div>
               </ul>
