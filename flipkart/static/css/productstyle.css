@@ -1,0 +1,49 @@
+
+  
+
+
+header{
+    display: flex;
+    height: 55px;
+    background-color: #2874f0;
+}
+
+#small img{
+    width: 100%;
+    height: 37%;
+    margin-top: 4px;
+    margin-left: 3px;
+}
+.extra { 
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    display: flex;
+    margin-left: 5px;
+}
+.extra h5{
+    font-size: 11px;
+    margin-top: 5px;
+    color: white;
+}
+.extra img{
+    margin-left: 6px;
+}
+#green{
+    color: yellow;
+    margin-left: 3px;
+}
+#small{
+    margin-left: 190px;
+}
+
+
+#smalls{
+    margin-left: 150px;
+}
+#smalls img{
+    width: 100%;
+    height: 37%;
+    margin-top: 4px;
+    margin-left: 3px;
+}
