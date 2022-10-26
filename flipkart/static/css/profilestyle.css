@@ -2,31 +2,65 @@
     font-family: 'Roboto', sans-serif;
 
 }
-.body{
-    background-color: rgb(138, 210, 238);
+.colr{
+    background-color: rgb(236, 238, 244);
 }
-
 .bor{
-    background-color: rgb(236, 243, 245);
-}
-.margin{
-    margin-bottom: 20px;
+    background-color: white;
+    margin-top: 50px;
 }
 .bot{
     border-bottom: 1px solid black;
 }
-.mar{
-    margin-left: 10px;
+.margino{
+    margin-bottom: 60px;
+}
+.marginbox{
+    margin-bottom: 20px;
+}
+
+.flex{
+    display: flex;
 }
 .lockb{
-    width: 200px;
-    height: 10px;
+    margin-right: 1px;
+    width: 350px;
 }
-.inter{
-    width: 800px;
-    margin-left: 250px; 
-    height: 10px;
+.marginbox a{
+    margin-bottom: 20px;
 }
-
-
-
+.all li{
+    margin-bottom: 30px;
+    list-style: none;
+}
+.mar{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.cont{
+    padding-left: 30px;
+}
+.borax{
+    background-color: white;
+    margin-top: 50px;
+    height: 80px;
+    width: 330px;
+}
+.pas{
+    padding-left: 45px;
+    margin-bottom: 50px;
+}
+.hei{
+    margin-bottom: 90px;
+    width: 400px;
+}
+.icon{
+    color: rgb(100, 100, 232);
+}
+.iconb{
+    border-radius: 50px;
+    padding-left: 9px;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+}
