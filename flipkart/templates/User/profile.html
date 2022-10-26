@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+
+<section class="colr">
+    <div class="container flex">
+        <div class="lockb row">
+            <div class="borax">
+                <div class="iconb">
+                    <i class="fa-solid fa-user me-2 icon"></i>
+                </div>
+                <div class="pas">
+                    <div>Hello,</div>
+                    <b>name</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bor hei">
+                    <div class="bot">
+                        <div class="mar ">
+                            <i class="fa-solid fa-boxes-packing me-3 icon"></i><b>MY ORDERS</b>
+                        </div>
+                    </div>
+                    <div class="row bot">
+                        <div class="col">
+                            <div class="marginbox mar ">
+                                <i class="fa-solid fa-user me-3 icon"></i>ACCOUNT SETTINGS
+                            </div>
+                            <ul class="all marginbox">
+                                <li href="#">Profile Information</li>
+                                <li href="#">Manage Address</li>
+                                <li href="#">PAN Card information</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row bot">
+                        <div class="col">
+                            <div class="marginbox mar ">
+                                <i class="fa-solid fa-wallet me-3 icon"></i></i>PAYMENTS
+                            </div>
+                            <ul class="all marginbox">
+                                <li href="#">Gift cards</li>
+                                <li href="#">Saved UPI</li>
+                                <li href="#">Saved cards</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="marginbox mar ">
+                                <i class="fa-solid fa-folder-closed me-3 icon"></i></i>MY STUFF
+                            </div>
+                            <ul class="all marginbox">
+                                <li href="#">My coupons</li>
+                                <li href="#">My Reviews & Ratings</li>
+                                <li href="#">All Notifications</li>
+                                <li href="#">My Wishlist</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="marginbox ">
+                        <i class="fa-solid fa-right-from-bracket me-3 icon"></i>Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inter bor">
+            <form class="allin boxin" action="" method="POST">
+                <div class="container bor cont">
+                    <div class="margino">
+                        <b>Personal Information</b>
+                    </div>
+                    <div class="col margino">
+                        <label for="uname"></label>
+                        <input type="text" placeholder="First Name" name="First Name" required>
+    
+                        <label for="uname"></label>
+                        <input type="text" placeholder="Last Name" name="Last name" required>
+                    </div>
+                    <div class="margino">
+                        <p>Your Gender?</p>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </div>
+                    <div class="margino">
+                        <label for="Email"><b>Email Address</b></label>
+                        <input type="text" placeholder="Email Address" name="Email Address" required>
+                    </div>
+                    <div class="margino">
+                        <label for="number"><b>Mobile Number</b></label>
+                        <input type="text" placeholder="Mobile Number" name="Mobile Number" required>
+                    </div>
+                    <span class="margino">
+                        <h5 class="margino">FAQs</h5>
+                        <b class="margino">What happens when I update my email address (or mobile number)?</b>
+                        <p class="margino">Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).</p>
+                        <b class="margino">When will my Flipkart account be updated with the new email address (or mobile number)?</b>
+                        <p class="margino">It happens as soon as you confirm the verification code sent to your email (or mobile) and save the changes.</p>
+                        <b class="margino">What happens to my existing Flipkart account when I update my email address (or mobile number)?</b>
+                        <p class="margino">Updating your email address (or mobile number) doesn't invalidate your account. Your account remains fully functional. You'll continue seeing your Order history, saved information and personal details.</p>
+                        <b class="margino">Does my Seller account get affected when I update my email address?</b>
+                        <p class="margino">Flipkart has a 'single sign-on' policy. Any changes will reflect in your Seller account also.</p>
+                        
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
