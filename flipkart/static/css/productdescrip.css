@@ -1,0 +1,18 @@
+ 
+ 
+ 
+ 
+ 
+ p{
+    color: #878787;
+    font-size: smaller;
+ }
+
+
+ .second img {
+      max-height: 416px;
+      max-width: 416px;
+ }
+ .down img{
+   display:block;
+ }

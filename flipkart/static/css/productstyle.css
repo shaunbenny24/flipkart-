@@ -40,3 +40,25 @@ padding-left: 28px;
 #id{
     display: flex;
 }
+.col-2{
+    background-color: white;
+    font-size: x-small;
+    padding-left: 15px;
+    padding-top: 10px;
+    
+}
+.cor{
+   
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+button{
+    color: black;
+}
+label{
+    font-size: medium;
+}
+.blue {
+    color:#2874f0;
+}
