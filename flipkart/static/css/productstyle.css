@@ -1,49 +1,64 @@
+.mbhead{
 
-  
+    line-height: 1.45;
+    font-size: 12px;
+    background-color: #f1f3f6;
+}
+.mbhead h4{
+    font-weight: 500;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 15px;
 
-
-header{
+}
+.mbhead p{
+    color: #878787;
+    padding-left: 10px;
+}
+.mbhead a{
+    text-decoration: none;
+}
+.imgs img{
+    width: 158px;
+}
+.row h5{
+padding-left: 28px;
+}
+.carousel-control-next-icon{
+    filter: invert(1);
+    background-color:rgb(80, 74, 74);
+}
+.carousel-control-prev-icon{
+    filter: invert(1);
+    background-color:rgb(80, 74, 74);
+}
+.carousel-inner{
+    padding-top: 20px;
+    margin-right: 15px;
+    background-color: white;
+}
+#id{
     display: flex;
-    height: 55px;
-    background-color: #2874f0;
 }
-
-#small img{
-    width: 100%;
-    height: 37%;
-    margin-top: 4px;
-    margin-left: 3px;
+.col-2{
+    background-color: white;
+    font-size: x-small;
+    padding-left: 15px;
+    padding-top: 10px;
+    
 }
-.extra { 
-    height: 40px;
-    width: 40px;
-    font-size: 8px;
-    display: flex;
-    margin-left: 5px;
+.cor{
+   
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
-.extra h5{
-    font-size: 11px;
-    margin-top: 5px;
-    color: white;
+button{
+    color: black;
 }
-.extra img{
-    margin-left: 6px;
+label{
+    font-size: medium;
 }
-#green{
-    color: yellow;
-    margin-left: 3px;
-}
-#small{
-    margin-left: 190px;
-}
-
-
-#smalls{
-    margin-left: 150px;
-}
-#smalls img{
-    width: 100%;
-    height: 37%;
-    margin-top: 4px;
-    margin-left: 3px;
+.blue {
+    color:#2874f0;
 }

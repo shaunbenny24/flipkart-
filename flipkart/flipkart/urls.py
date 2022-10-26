@@ -25,10 +25,16 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('', include('main.urls')),
+<<<<<<< HEAD
     path ('customer/', include('customer.urls')),
     # path ('kart/', include('kart.urls')),
+=======
+    # path ('customer/', include('customer.urls')),
+    path ('kart/', include('kart.urls')),
+>>>>>>> main
     # path ('payment', include('payment.urls')),
-    # path ('product/', include('main.urls')),
+    path ('product/', include('product.urls')),
+    path('order/',include('order.urls'))
     # path ('banners/', include('banners.urls'))
 ]
 
