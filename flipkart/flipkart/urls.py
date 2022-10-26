@@ -29,6 +29,7 @@ urlpatterns = [
     path ('kart/', include('kart.urls')),
     # path ('payment', include('payment.urls')),
     path ('product/', include('product.urls')),
+    path('order/',include('order.urls'))
     # path ('banners/', include('banners.urls'))
 ]
 
