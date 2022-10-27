@@ -27,7 +27,6 @@ urlpatterns = [
     path ('', include('main.urls')),
 
     path ('customer/', include('customer.urls')),
- 
     path ('kart/', include('kart.urls')),
 
     # path ('payment', include('payment.urls')),
