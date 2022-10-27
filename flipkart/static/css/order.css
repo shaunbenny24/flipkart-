@@ -12,6 +12,10 @@
     color: blue ;
    
 }
+.category_p{
+    font-weight: 500;
+    font-size: 15px;
+}
 .filter{
     background-color: white;
     width: 100%;
@@ -38,6 +42,11 @@
    -webkit-box-shadow: none;
    box-shadow: none;
    }
+
+.search_box button{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 4px;
+}
 .odr_prouct {
     width: 100%;
     background-color: white;
@@ -52,4 +61,26 @@
 .odr_prouct img{
     width: 40px;
     height: 80px;
+}
+.del_ads h5{
+    font-size: 16px;
+}
+.del_ads span{
+    font-size: 15px;
+    font-weight: 500;
+}
+.del_ads p{
+    font-size: 14px;
+}
+.download_a{
+    font-size: 12px;
+}
+.tracking th{
+    font-size: 10px;
+}
+.tracking td{
+    position: absolute;
+}
+.tracking tr{
+    position: relative;
 }

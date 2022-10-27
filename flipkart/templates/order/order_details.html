@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+<section class="categories d-none d-lg-block pt-3">
+    <div class="container">
+        <div class="d-flex text-center justify-content-between category_p">
+            <div class="category_p">
+                <p><a href="">Top Offers</a></p>
+            </div>
+            <div>
+
+                <p><a href="">Mobiles</a></p>
+            </div>
+            <div>
+
+                <p><a href="">Electronics</a></p>
+            </div>
+            <div>
+                <p><a href="">Appliances</a></p>
+            </div>
+            <div>
+                <p><a href="">Fashion</a></p>
+            </div>
+            <div>
+                <p><a href="">Beauty and Toys</a></p>
+            </div>
+            <div>
+                <p><a href="">Grocery</a></p>
+            </div>
+            <div>
+                <p><a href="">Home</a></p>
+            </div>
+            <div>
+                <p><a href="">Travel</a></p>
+            </div>
+            <div>
+                <p><a href="">2-Wheelers</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- address -->
+<section class="order_content p-5">
+    <div class="container">
+        <!-- <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>     -->
+    </div>
+<div class="container bg-white border rounded-1">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="del_ads pt-4 ms-3">
+                <h5>Delivery Address</h5>
+                <span>Vishnu Ka </span>
+                <p class="mt-2">Kattukaran parambil Kottuvally south, Sahakarana bank Kottuvally - 683519, Kerala</p>
+           <span>Phone number</span>
+           <p>7560977826, 8547078826</p>
+            </div>
+        </div>
+        <div class="col-md-3" style="border-left: 1px solid #e6e6e6;">
+            <div class="del_ads ms-3 pt-4">
+                <h5>Your Rewards</h5>
+                <p class="mt-4 pt-2"><img width="23px;" src="https://rukminim1.flixcart.com/www/80/80/promos/15/07/2022/b24f2613-b89e-4e0a-8140-1316ad11f394.png?q=100" alt="">
+                    12 SuperCoins</p>
+            </div>
+        </div>
+        <div class="col-md-3" style="border-left: 1px solid #e6e6e6;">
+            <div class="del_ads pt-4 ms-3">
+                <h5>More actions</h5>
+                <p class="mt-4 pt-2"><img width="23px;" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/downloadInvoice_e0f744.png" alt="">
+                    Download Invoice</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-md-5 mt-0 mb-3 mb-md-0 text-center pt-4">
+                <a href="" class="border ps-5 pt-2 pb-2 pe-5 download_a text-decoration-none"><strong>Download</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- product details -->
+<div class="container bg-white border rounded-1 mt-3">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="del_ads pt-4 ms-3">
+                <div class="d-flex">
+                    <div class="me-2"><img width="70px;" src="https://rukminim1.flixcart.com/image/jnnhua80/watch/w/2/e/ar-a1-a2-a3-armado-original-imafaadhryswdcs3.jpeg" alt=""></div>
+                    <div><p>ARMADO AR-A1 A2 A3 STYLISH COMBO OF 3 An...</p>
+                        <p style="font-size: 11px;color: gray;">Seller: SbgRetails</p>
+                        <span><strong>₹359</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+           <div class="tracking pt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order Confirmed</th>
+                        <tb>Shipped</th>
+                        <th>Out For Delivery</th>
+                        <th>Delivered</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="green_"></div><i class="fa-solid fa-circle"></i></td>
+                        <td><i class="fa-solid fa-circle"></i></td>
+                        <td><i class="fa-solid fa-circle"></i></td>
+                        <td><i class="fa-solid fa-circle"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+           </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+</section>
+
+{% endblock %}
