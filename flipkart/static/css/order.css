@@ -38,6 +38,11 @@
    -webkit-box-shadow: none;
    box-shadow: none;
    }
+
+.search_box button{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 4px;
+}
 .odr_prouct {
     width: 100%;
     background-color: white;
