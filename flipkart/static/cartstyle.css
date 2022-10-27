@@ -129,7 +129,7 @@ h6{
 .deliver{
     background-color: white;
     padding: 20px 20px;
-    width: 876px;
+    
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -139,7 +139,7 @@ h6{
     gap: 5px;
     background-color: white;
     padding: 20px 20px;
-    width: 876px;
+    
     justify-content: space-between;
     
 }
@@ -226,7 +226,7 @@ h6{
 .cat{
     background-color: white;
     margin-top: 10px;
-    width: 876px;
+    
     padding: 10px 20px;
     justify-content: center;
     
@@ -242,7 +242,7 @@ h6{
     background-color: white;
     padding: 20px;
     margin-top: 10px;
-    width: 876px;
+    
     justify-content: center;
 
 }
@@ -317,7 +317,7 @@ h6{
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    width: 876px;
+    
 }
 ._2h2IDm{
     font-size: 16px;
@@ -343,7 +343,7 @@ h6{
     justify-content: space-between;
     background-color: white;
     padding: 20px 90px;
-    width: 876px;
+    
 }
 .x2{
     display: inline-block;
