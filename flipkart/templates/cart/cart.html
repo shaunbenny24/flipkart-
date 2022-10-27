@@ -255,7 +255,7 @@
                 </div>
                 <div class="cel2 ex4">
                     <div>
-                        <p><a href="">SONY Alpha Full Frame ILCE-7M2K/BQ IN5 Mirrorless Cam...</a></p>
+                        <p><a href="" id="sony">SONY Alpha Full Frame ILCE-7M2K/BQ IN5 Mirrorless Cam...</a></p>
                         <div class="red"><p>Black</p></div>
                         <div class="ex3">
                     
@@ -312,7 +312,7 @@
                 
             </div>
             <div class="des xxx">
-                <div><button class="no1" disabled=""> – </button></div>
+                <div><button class="no1"> – </button></div>
                 <div class="">
                     <input type="text" class="_253qQJ" value="1">
                 </div>
@@ -325,7 +325,7 @@
                 <div class="sav"><a href="">Remove</a></div>
             </div>
             <div class="ord">
-                <button class="place">PLACE ORDER</button>
+                <a href="{% url 'subcart' %}"><button class="place">PLACE ORDER</button></a>
             </div>
 
         </div>
@@ -361,7 +361,7 @@
                     <p>Delivery Charges</p>
                 </div>
                 <div class="numb1">
-                    <p>Free</p>
+                    <p id="free">Free</p>
                 </div>
             </div>
             <div class="flex cor">
@@ -377,33 +377,43 @@
             </div>
             
         </div>
+        <div class="ret">
+            <div>
+                <img src="{% static 'images/safe.png' %}">
+            </div>
+            <div>
+                <p>Safe and Secure Payments.Easy returns.100%<br> Authentic products.</p>
+            </div>
+            
+            
+        </div>
     </div>
           
         
     
    </section>
-   <div class="sec">
-    <div class="des">
-        <div><a href="">Policies:</a></div>
-        <div><a href="">Returns Policy|</a></div>
-        <div><a href="">Terms of use|</a></div>
-        <div><a href="">Security|</a></div>
-        <div><a href="">Privacy|</a></div>
-        <div><a href="">Infringement|</a></div>
-    </div>
-    <div class="one  des">
-        
-        <p><i class="fa-regular fa-copyright"></i> 2007-2022 Flipkart.com</p>
-    </div>
-    <div class="need">
-        <span>Need help?</span>
-        <span>Visit the <a href="">Help Center</a> or<a href="">Contact Us</a></span>
-    </div>
+    <div class="sec">
+        <div class="des">
+            <div><a href="">Policies:</a></div>
+            <div><a href="">Returns Policy|</a></div>
+            <div><a href="">Terms of use|</a></div>
+            <div><a href="">Security|</a></div>
+            <div><a href="">Privacy|</a></div>
+            <div><a href="">Infringement|</a></div>
+        </div>
+        <div class="one  des">
+            
+            <p><i class="fa-regular fa-copyright"></i> 2007-2022 Flipkart.com</p>
+        </div>
+        <div class="need">
+            <span>Need help?</span>
+            <span>Visit the <a href="">Help Center</a> or<a href="">Contact Us</a></span>
+        </div>
         
         
         
     
-</div>
+    </div>
 
    
 
