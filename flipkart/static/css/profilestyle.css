@@ -10,7 +10,7 @@
     margin-top: 50px;
 }
 .bot{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(215, 206, 206);
 }
 .margino{
     margin-bottom: 60px;
@@ -39,19 +39,21 @@
 }
 .cont{
     padding-left: 30px;
+    margin-bottom: 20px;
 }
 .borax{
     background-color: white;
     margin-top: 50px;
     height: 80px;
     width: 330px;
+    padding-top: 20px;
 }
 .pas{
-    padding-left: 45px;
+    padding-left: 20px;
     margin-bottom: 50px;
 }
 .hei{
-    margin-bottom: 90px;
+    margin-bottom: 300px;
     width: 400px;
 }
 .icon{
@@ -64,3 +66,53 @@
     height: 30px;
     background-color: yellow;
 }
+.width{
+    width: 250px;
+    height: 40px;
+}
+li:hover {
+    background-color: rgb(192, 206, 233);
+}
+.a{
+    text-decoration: none;
+}
+.non{
+    text-decoration: none;
+}
+.cd{
+    color: black;
+}
+.bom{
+    border: 1px solid grey;
+    width: 750px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.bom2{
+    border: 1px solid grey;
+    width: 750px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.and{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+.bor1{
+    background-color: white;
+    margin-top: 50px;
+    width: 810px;
+    padding-left: 10px;
+}
+.boxo{
+    background-color: rgb(203, 194, 194);
+    width: 45px;
+}
+
