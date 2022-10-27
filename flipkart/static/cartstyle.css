@@ -196,7 +196,7 @@ body{
     min-width: 250px;
     font-size: 16px;
     font-weight: 500;
-    position: relative;
+    
   
 }
 .png{
@@ -262,7 +262,7 @@ body{
 .no1{
     color: #c2c2c2;
     border-color: #e0e0e0;
-    cursor: auto;
+    /* cursor: auto; */
     width: 28px;
     height: 28px;
     background: linear-gradient(#fff,#f9f9f9);
