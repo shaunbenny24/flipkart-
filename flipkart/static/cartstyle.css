@@ -74,7 +74,14 @@ body{
     display: flex;
 }
 #pay{
+    color: black;
+}
+label{
     color: #717478;
+}
+.check-with-label:checked + .label-for-check {
+    font-weight: bold;
+    color: #388e3c;
 }
 
 #change{
