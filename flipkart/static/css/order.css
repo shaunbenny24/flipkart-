@@ -1,3 +1,4 @@
+/* order list */
 .order_content{
     /* background-color: #F1F3F6; */
     background-color: #F1F3F6;
@@ -62,6 +63,7 @@
     width: 40px;
     height: 80px;
 }
+/* order details */
 .del_ads h5{
     font-size: 16px;
 }
@@ -75,12 +77,60 @@
 .download_a{
     font-size: 12px;
 }
-.tracking th{
-    font-size: 10px;
+
+/* .pgreen_line{
+   position: relative;
+} */
+.green td{
+    /* padding-left: 35px; */
+   
+    /* position: absolute; */
 }
-.tracking td{
-    position: absolute;
+.green th{
+    /* padding-left: 10px; */
+    font-size: 9px;
 }
-.tracking tr{
+.green_lines{
     position: relative;
+    font-size: 9px;
+    border-top: 3px solid #26a541 !important;
+}
+.green_round{
+    background-color: #26a541;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 11px;
+    left: 0;
+}
+.green_round1{
+    background-color: #26a541;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 11px;
+    right: 0;
+}
+
+/* .green_line{
+    background-color: #26a541;
+    width: 128px;
+    height: 3px;
+    position: absolute;
+    top: 4px;
+    
+}
+@media (max-width: 521px) { 
+    .green_line{
+        width: 88px;  
+        position: absolute;
+    }
+} */
+.tracking{
+    font-size: 11px;
+}
+.rating_review{
+    font-size: 14px;
 }
