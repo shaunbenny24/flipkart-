@@ -26,6 +26,11 @@
     margin-right: 1px;
     width: 350px;
 }
+@media (max-width:992px) {
+    .lockb{
+        width: 100%;
+    }
+}
 .marginbox a{
     margin-bottom: 20px;
 }
@@ -45,7 +50,7 @@
     background-color: white;
     margin-top: 50px;
     height: 80px;
-    width: 330px;
+    width: 100%;
     padding-top: 20px;
 }
 .pas{
@@ -54,7 +59,6 @@
 }
 .hei{
     margin-bottom: 300px;
-    width: 400px;
 }
 .icon{
     color: rgb(100, 100, 232);
@@ -82,18 +86,8 @@ li:hover {
 .cd{
     color: black;
 }
-.bom{
-    border: 1px solid grey;
-    width: 750px;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: 30px;
-    padding-left: 10px;
-    padding-top: 10px;
-}
 .bom2{
     border: 1px solid grey;
-    width: 750px;
     height: 150px;
     margin-top: 30px;
     margin-left: 30px;
@@ -108,11 +102,25 @@ li:hover {
 .bor1{
     background-color: white;
     margin-top: 50px;
-    width: 810px;
     padding-left: 10px;
 }
 .boxo{
     background-color: rgb(203, 194, 194);
     width: 45px;
 }
-
+.margi{
+    margin-bottom: 20px;
+}
+.wid{
+    width: 430px;
+    height: 100px;
+}
+.bak{
+    background-color: rgb(95, 95, 191);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    border: none;
+    color: #fff
+}
+.no{
+    border: none;
+}

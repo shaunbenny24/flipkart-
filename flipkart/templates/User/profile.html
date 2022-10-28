@@ -4,68 +4,70 @@
 
 
 <section class="colr">
-    <div class="container flex">
-        <div class="lockb row">
-            <div class="borax flex">
-                <div class="iconb">
-                    <i class="fa-solid fa-user me-2 icon"></i>
+    <div class="container ">
+        <div class="row">
+            <div class="lockb row  col-lg-2">
+                <div class="borax flex">
+                    <div class="iconb">
+                        <i class="fa-solid fa-user me-2 icon"></i>
+                    </div>
+                    <div class="pas">
+                        <div>Hello,</div>
+                        <b>name</b>
+                    </div>
                 </div>
-                <div class="pas">
-                    <div>Hello,</div>
-                    <b>name</b>
+                <div class="row ">
+                    <div class="bor hei">
+                        <div class="bot">
+                            <div class="mar ">
+                                <i class="fa-solid fa-boxes-packing me-3 icon"></i><b>MY ORDERS</b>
+                            </div>
+                        </div>
+                        <div class="row bot">
+                            <div class="col">
+                                <div class="marginbox mar ">
+                                    <i class="fa-solid fa-user me-3 icon"></i>ACCOUNT SETTINGS
+                                </div>
+                                <ul class="all marginbox">
+                                    <li><a href="#" class="non">Profile Information</a></li>
+                                    <li><a href="{% url 'manage' %}" class="non cd">Manage Address</a></li>
+                                    <li><a href="#" class="non cd">PAN Card information</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row bot">
+                            <div class="col">
+                                <div class="marginbox mar ">
+                                    <i class="fa-solid fa-wallet me-3 icon"></i></i>PAYMENTS
+                                </div>
+                                <ul class="all marginbox">
+                                    <li><a href="#" class="non cd">Gift cards</a></li>
+                                    <li><a href="#" class="non cd">Saved UPI</a></li>
+                                    <li><a href="#" class="non cd">Saved cards</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="marginbox mar ">
+                                    <i class="fa-solid fa-folder-closed me-3 icon"></i></i>MY STUFF
+                                </div>
+                                <ul class="all marginbox bot">
+                                    <li><a href="#" class="non cd">My coupons</a></li>
+                                    <li><a href="#" class="non cd">My Reviews & Ratings</a></li>
+                                    <li><a href="#" class="non cd">All Notifications</a></li>
+                                    <li><a href="#" class="non cd">My Wishlist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="marginbox">
+                            <i class="fa-solid fa-right-from-bracket me-3 icon"></i><a href="#" class="non cd">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row ">
-                <div class="bor hei">
-                    <div class="bot">
-                        <div class="mar ">
-                            <i class="fa-solid fa-boxes-packing me-3 icon"></i><b>MY ORDERS</b>
-                        </div>
-                    </div>
-                    <div class="row bot">
-                        <div class="col">
-                            <div class="marginbox mar ">
-                                <i class="fa-solid fa-user me-3 icon"></i>ACCOUNT SETTINGS
-                            </div>
-                            <ul class="all marginbox">
-                                <li><a href="#" class="non">Profile Information</a></li>
-                                <li><a href="{% url 'manage' %}" class="non cd">Manage Address</a></li>
-                                <li><a href="#" class="non cd">PAN Card information</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row bot">
-                        <div class="col">
-                            <div class="marginbox mar ">
-                                <i class="fa-solid fa-wallet me-3 icon"></i></i>PAYMENTS
-                            </div>
-                            <ul class="all marginbox">
-                                <li><a href="#" class="non cd">Gift cards</a></li>
-                                <li><a href="#" class="non cd">Saved UPI</a></li>
-                                <li><a href="#" class="non cd">Saved cards</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="marginbox mar ">
-                                <i class="fa-solid fa-folder-closed me-3 icon"></i></i>MY STUFF
-                            </div>
-                            <ul class="all marginbox bot">
-                                <li><a href="#" class="non cd">My coupons</a></li>
-                                <li><a href="#" class="non cd">My Reviews & Ratings</a></li>
-                                <li><a href="#" class="non cd">All Notifications</a></li>
-                                <li><a href="#" class="non cd">My Wishlist</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="marginbox">
-                        <i class="fa-solid fa-right-from-bracket me-3 icon"></i><a href="#" class="non cd">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inter bor">
+        
+        <div class="inter bor col-lg-7 ">
             <form class="allin boxin" action="" method="POST">
                 <div class="container bor cont">
                     <div class="margino">
@@ -104,7 +106,7 @@
                     </span>
                         <div><a class="non" href="">Deactivate Account</a></div>
                     <div>
-                        <img src="{% static 'profileimg/profile.png' %}" alt="">
+                        <img width="100%;" src="{% static 'profileimg/profile.png' %}" alt="">
                     </div>
                 </div>
             </form>
@@ -113,3 +115,5 @@
 </section>
 
 {% endblock %}
+
+
