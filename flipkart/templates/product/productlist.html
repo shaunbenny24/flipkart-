@@ -262,17 +262,17 @@
           </button>
       </div>
 
-
+     
       <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{% static 'img/product/p1.webp' %}" class="d-block w-100" alt="...">
+            <img src="{{descrips.slideimage.url}}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="{% static 'img/product/p2.webp' %}" class="d-block w-100" alt="...">
+            <img src="{{descrips.slideimages.url}}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="{% static 'img/product/p2.webp' %}" class="d-block w-100" alt="...">
+            <img src="{{descrips.slideimage.url}}" class="d-block w-100" alt="...">
           </div>
         </div>
         <button style="position: relative;" class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
@@ -291,58 +291,35 @@
         <div class="mt-4">
           <h3 class="text-center">All Products</h3>
         </div>
+       
         <div class="mt-4">
+     
          <div class="row">
+       
+       
+          {% for Categories in descrips %}
           <div class="col-lg-2 col-4">
+        
+            <a href="{% url 'productdetail' Categories.pk %}">
             <div class="text-center all_product" >
-              <img src="{% static 'img/product/mob1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">realme 9 5G (Stargaze White, 128 GB)  (6 GB RAM)</p>
+              <img id="simages" src="{{Categories.pimage1.url}}" width="75%;" class="img-fluid" alt="...">
+                <p class="mt-3">{{Categories.title}}</p>
                 <div class="d-flex justify-content-center">
                   <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
                 </div>
-                <p class="price mt-2"><strong>₹17,499 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
+                <p class="price mt-2"><strong>₹{{Categories.price}} &nbsp;</strong>
+                  <span class="text-decoration-line-through text-secondary"> ₹ {{Categories.disprice}}</span>
                   <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
+            </div>   </a>
           </div>
-          <div class="col-lg-2 col-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/product/mob1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">realme 9 5G (Stargaze White, 128 GB)  (6 GB RAM)</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹17,499 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
+        
+       
+        {% endfor %}
           </div>
-          <div class="col-lg-2 col-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/product/mob1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">realme 9 5G (Stargaze White, 128 GB)  (6 GB RAM)</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹17,499 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/product/mob1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">realme 9 5G (Stargaze White, 128 GB)  (6 GB RAM)</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹17,499 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-        </div>
-          </div>
-          
+  
+
+
+        {% endblock %}
           
          </div>
         </div>
@@ -354,4 +331,3 @@
 </div>
 
 
-{%endblock%}
