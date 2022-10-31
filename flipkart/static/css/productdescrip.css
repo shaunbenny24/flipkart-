@@ -18,38 +18,45 @@
  }
  .down img{
    display:block;
+
+ }
+ .ismall img{
+  width: 80%;
+  height: 10%;
+ }
+ .center img{
+margin-left: 100px;
  }
 
- .ord{
-  border-top: 1px solid #f0f0f0;
-  background: #fff;
-  padding: 16px 22px;
-  box-shadow: 0 -2px 10px 0 rgba(0,0,0,.1);
-  text-align: right;
+.res{
+  padding-top: 10px;
+
 }
-.place{
+.ponse{
+  margin-left: 10px;
+}
+#place{
   background: #fb641b;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
   border: none;
   color: #fff;
   padding: 16px 30px;
-  min-width: 200px;
+  min-width: 180px;
   font-size: 16px;
   font-weight: 500;
-  position: relative;
+
 
 }
-.place1{
+#place1{
 
   background: #ff9f00;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
   border: none;
   color: #fff;
   padding: 16px 30px;
-  min-width: 200px;
+  min-width: 180px;
   font-size: 16px;
   font-weight: 500;
-  position: relative;
 
 }
 ._3iRXzi {

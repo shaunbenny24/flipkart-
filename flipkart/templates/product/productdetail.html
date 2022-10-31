@@ -6,36 +6,41 @@
 {%endblock%}
 {% block content%}
 
+
+
+<div class="container-fluid">
 <section class="row">
-<div class="col-1 container-fluid  down">
-    <img src="{%static 'img/product/side1.webp'%}">
-    <img src="{%static 'img/product/side2.webp'%}">
-    <img src="{%static 'img/product/side3.webp'%}">
-    <img src="{%static 'img/product/side4.webp'%}">
+<div class="col-lg-1 col-2 ismall down">
+    <img src="{{productdetail.pimage2.url}}">
+    <img src="{{productdetail.pimage3.url}}">
+    <img src="{{productdetail.pimage4.url}}">
+    <img src="{{productdetail.pimage5.url}}">
 
 </div>
-<div class="second container-fluid col-4">
-    <img src="{%static 'img/product/s22.jpg'%}">
+<div class="second container-fluid center col-10 col-lg-4">
+    <img src="{{productdetail.pimage1.url}}">
     <div class="row">
-        <a class="col-5" href="#">     <div class="ord">
-            <button class="place1">GO TO CART</button>
+        <a class="col-4 res"  href="#">     <div>
+            <button id="place1">GO TO CART</button>
             </div></a>
             <p class="col-1"></p>
-            <a class="col-5" href="#">     <div class="ord">
+            <a class="col-5 res ponse" href="#">     <div >
                 <span class="_3iRXzi"></span>
-                <button class="place">ORDER NOW</button>
+                <button id="place">ORDER NOW</button>
                 </div></a>
     </div>
 </div>
-<div class="container-fluid col-7">
+<div class=" container-fluid col-12 col-lg-7 col-mg-12" >
     <p>Home > Mobiles & Accessories >Mobiles >SAMSUNG Mobiles
-       > SAMSUNG Galaxy S22 ultra 5G (Burgundy, 256 GB) (12 GB RAM)</p>
-       <h4>SAMSUNG Galaxy S22 ultra 5G (Burgundy, 256 GB)  (12 GB RAM)</h4>
+       > {{productdetail.title}}</p>
+       <h4>{{productdetail.title}}</h4>
      <div class="rat">
         <div class="rating_tags"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
         <p>41 Ratings & 7 Reviews</p>
     </div>
-    <h4>₹1,09,000</h4>
+    <p  style="font-size: 22px;"class="price mt-2"><strong>₹{{productdetail.price}} &nbsp;</strong>
+        <span style="font-size: 22px;" class="text-decoration-line-through text-secondary"> ₹{{productdetail.disprice}}</span>
+        <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
     <span>Available offerss</span>  
         <li> <img width="18" height="18" src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90">
             <span class="offer">Bank Offer</span><span>10% off on Citi Credit Card Transactions, up to ₹1,500. On orders of ₹5,000
@@ -46,7 +51,6 @@
                         <span class="offer">Bank Offer</span><span>10% off on Citi Debit Card Transactions, up to ₹1,500. On orders of ₹5,000 and above<span id="greenn"> T & C </span></li>
                         <li> <img width="18" height="18" src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90">
                             <span class="offer">FreeBie</span><span>BYJU'S 3 Live Classes worth ₹999<span id="greenn"> T & C </span></li>
-
 
         
         <span id="greenn">View 5 more offers </span><br>
@@ -110,7 +114,7 @@
             <td class="details">
              Yes
             </td>
-        </tr>
+        </tr>      
         <tr>
             <td class="k"> OTG Compatible</td>
             <td class="details">
@@ -148,6 +152,7 @@
 
                     </div>
 </section>
+</div>
 
 
 {%endblock%}
