@@ -16,7 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <!-- font awesome -->
     <script src="https://kit.fontawesome.com/95070c6490.js" crossorigin="anonymous"></script>
-
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/profilestyle.css' %}">
 
@@ -34,10 +35,12 @@
            
             <div class="search_bar d-flex">
                 <div class="logo_group me-3">
-                    <img width="80rem;" src="{% static 'img/home/flipkart-plus_8d85f4.png' %}" alt="">
+                    <a href="{% url 'home' %}">
+                        <img width="80rem;" src="{% static 'img/home/flipkart-plus_8d85f4.png' %}" alt="">
                     <div class="text">Explore <span style="color: #ffe500;">Plus</span>
                         <img width="12rem;" src="{% static 'img/home/plus_aef861.png' %}" alt="">
                     </div>
+                    </a>
                 </div>
                 <div>
                     <form action="">
@@ -50,17 +53,30 @@
                 </div>
             </div>
             <!-- Button trigger modal -->
-            <div class="mt-"><button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button></div>
+            {% if not request.user.is_authenticated %}
+            <div class="mt-">
+                <button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+            </div>
+            {% endif %}
             <div class="mt-2">
                 <div class="dropdown">
+                    
+                    {% if request.user.is_authenticated %}
                     <a class="text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      User
-                    </a>
+                        {{request.user}}
+                      </a>
+                    
+                    {% else %}
+                    <!-- <a class="text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="text-white" href="{% url 'login' %}">Login</a>
+                      </a> -->
+                    {% endif %}
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user text-primary me-4"></i>Profile</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-power-off text-primary me-4"></i>Logout</a></li>
-                     
+                      {% if request.user.is_authenticated %}
+                      <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fa-solid fa-power-off text-primary me-4"></i>Logout</a></li>
+                      {% endif %}
                     </ul>
                   </div>
             </div>
@@ -99,21 +115,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="container">
-                    <form class="loginform" action="">
+                    <form class="loginform" id="task-form" action="{% url 'login' %}"  method="post">
+                        {% csrf_token%}
                         <div class="mt-5">
-                            <input  type="text" placeholder="Enter Email/Mobile Number">
+                            <input  type="text" id="phone" name="phone_number" placeholder="Enter Email/Mobile Number">
+                           
                         </div>
                         <div class="mt-5">
-                            <input  type="text" placeholder="Enter Password">
+                            <!-- <input  type="text" placeholder="Enter Password"> -->
+                            <h4 class="text-success" id="msgs"></h4>
                         </div>
                         <div class="mt-5">
                             <p><span class="text-secondary">By continuing, you agree to Flipkart's</span> <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
                         </div>
                         <div class="mt-5 mb-4">
-                            <button>Login</button>
+                            <button type="submit">Login</button>
                         </div>
-                        <div class="mt-5 mb-4 text-center">
+                        <!-- <div class="mt-5 mb-4 text-center">
                             <a  class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" href="">New to Flipkart? Create an account</a>
+                        </div> -->
+                        <div class="mt-5 mb-4 text-center">
+                            <a  class="" data-bs-toggle="modal" data-bs-target="#exampleModal3" href="">OTP</a>
                         </div>
                     </form> 
                 </div>
@@ -150,13 +172,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="container">
-                    <form class="loginform" action="">
+                    <form class="loginform" action="{% url 'register' %}" method="post">
+                        {% csrf_token %}
                         <div class="mt-5">
-                            <input  type="text" placeholder="Enter Mobile Number">
+                            <!-- <input type="text" placeholder="Enter Phonenumber" name="phone_number"> -->
+                            {{form.phone}}
                         </div>
-                        <div class="mt-5">
+                        <!-- <div class="mt-5">
                             <input  type="text" placeholder="OTP">
-                        </div>
+                        </div> -->
                         <!-- <div class="mt-5">
                             <input  type="text" placeholder="Enter Password">
                         </div> -->
@@ -164,7 +188,67 @@
                             <p><span class="text-secondary">By continuing, you agree to Flipkart's</span> <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
                         </div>
                         <div class="mt-5 mb-4">
-                            <button>CONTINUE</button>
+                            <button type="submit">CONTINUE</button>
+                        </div>
+                        <!-- <div class="mt-5 mb-4 text-center">
+                            <a href="">New to Flipkart? Create an account</a>
+                        </div> -->
+                    </form> 
+                </div>
+            </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- otp modal -->
+  <div  class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body p-0" >
+        <div class="row">
+            <div class="col-lg-4 d-none d-lg-block bkd_color">
+                <div class="container">
+                    <div class="mt-5 text-white">
+                        <h3>Looks like you're new here!</h3>
+                    <p>Sign up with your mobile number to get started</p>
+                    </div>
+                    <div class="mt-5">
+                        <img src="{%static 'img/home/login_img_c4a81e.png'%}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-12">
+                <div class="text-end mt-2">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="container">
+                    <!-- {% if uid %} -->
+                    <form class="loginform" action="{% url 'otp' uid  %}" method="post">
+                    <!-- {% else %}
+                    <form class="loginform" action="{% url 'otp' 123 %}" method="post"> -->
+                    <!-- {% endif %} -->
+                        {% csrf_token %}
+                        <div class="mt-5">
+                            <!-- <input type="text" placeholder="Enter Phonenumber" name="phone_number"> -->
+                            {{form.otp}}
+                        </div>
+                        <!-- <div class="mt-5">
+                            <input  type="text" placeholder="OTP">
+                        </div> -->
+                        <!-- <div class="mt-5">
+                            <input  type="text" placeholder="Enter Password">
+                        </div> -->
+                        <div class="mt-5">
+                            <p><span class="text-secondary">By continuing, you agree to Flipkart's</span> <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
+                        </div>
+                        <div class="mt-5 mb-4">
+                            <button type="submit">CONTINUE</button>
                         </div>
                         <!-- <div class="mt-5 mb-4 text-center">
                             <a href="">New to Flipkart? Create an account</a>
@@ -385,5 +469,23 @@ Telephone: <span class="text-primary">044-45614700</span>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+
+<!-- <script type="text/javascript">
+    $(document).on('submit','#task-form',function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'{% url "login" %}',
+            data:
+            {
+                phone:$("#phone").val(),
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success:function(data){
+                $('#msgs').html(data)
+                    }
+            })
+        });
+    </script> -->
 </body>
 </html>
