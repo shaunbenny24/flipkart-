@@ -23,10 +23,11 @@
  .ismall img{
   width: 80%;
   height: 10%;
+  padding-bottom: 15px;
  }
- .center img{
+ /* .center img{
 margin-left: 100px;
- }
+ } */
 
 .res{
   padding-top: 10px;
