@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'payment.apps.PaymentConfig',
     'product.apps.ProductConfig',
-    'order.apps.OrderConfig'
+    'order.apps.OrderConfig',
+    'account.apps.AccountConfig',
 ]
 
 MIDDLEWARE = [
@@ -138,4 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+ACCOUNT_SID= 'AC48adeeb32523417803490d69cfd5f4ed'
+AUTH_TOKEN= '85e4b9b102f8aaf56505a2fc77a38efc'
 
+AUTH_USER_MODEL = 'account.UserProfile'

@@ -1,3 +1,12 @@
 asgiref==3.5.2
+certifi==2022.9.24
+charset-normalizer==2.1.1
 Django==4.1.2
+idna==3.4
+Pillow==9.3.0
+PyJWT==2.6.0
+pytz==2022.5
+requests==2.28.1
 sqlparse==0.4.3
+twilio==7.15.0
+urllib3==1.26.12
