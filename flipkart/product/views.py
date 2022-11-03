@@ -6,7 +6,7 @@ from .models import Category,Product
 def product(request,id=None):
  if id:
         category = get_object_or_404(Category,id=id)
-        descrips = Product.objects.filter(category = Category)
+        descrips = Product.objects.filter( Category  = category)
 
         return render(request,'product/productlist.html',{'descrips':descrips} )
 
