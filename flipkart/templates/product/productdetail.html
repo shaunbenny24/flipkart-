@@ -6,6 +6,44 @@
 {%endblock%}
 {% block content%}
 
+<section class="categories d-none d-lg-block pt-3 border-bottom">
+    <div class="container">
+        <div class="d-flex text-center justify-content-between category_p">
+            <div class="category_p">
+                <p><a href="">Top Offers</a></p>
+            </div>
+            <div>
+
+                <p><a href="">Mobiles</a></p>
+            </div>
+            <div>
+
+                <p><a href="">Electronics</a></p>
+            </div>
+            <div>
+                <p><a href="">Appliances</a></p>
+            </div>
+            <div>
+                <p><a href="">Fashion</a></p>
+            </div>
+            <div>
+                <p><a href="">Beauty and Toys</a></p>
+            </div>
+            <div>
+                <p><a href="">Grocery</a></p>
+            </div>
+            <div>
+                <p><a href="">Home</a></p>
+            </div>
+            <div>
+                <p><a href="">Travel</a></p>
+            </div>
+            <div>
+                <p><a href="">2-Wheelers</a></p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <div class="container-fluid">
@@ -21,7 +59,7 @@
     <img src="{{productdetail.pimage1.url}}">
     <div class="row">
         <a class="col-4 res"  href="{% url 'cart' %}">     <div>
-            <button id="place1">GO TO CART</button>
+            <button id="place1">ADD TO CART</button>
             </div></a>
             <p class="col-1"></p>
             <a class="col-5 res ponse" href="{% url 'subcart' %}">     <div >

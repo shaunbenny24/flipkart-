@@ -11,6 +11,11 @@ input:focus {
 .bkd_color {
     background-color: #2874F0;
 }
+.none {
+    text-decoration: none;
+    color: #172337;
+    display: grid;
+}
 
 .normal_color {
     color: #2874F0;
