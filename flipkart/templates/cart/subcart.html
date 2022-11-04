@@ -62,23 +62,27 @@
         </div>
         <div class="four">
             <div class="cel2" id="third">
+                
+                 {% for item in cart %}
+                    {% with product=item.product %} 
                 <div class="ex4">
+                    <a href="{{ product.get_absolute_url }}"></a>
                     <div class="pic">
-                        <img src="{% static 'images/src.png' %}" id="img">
+                        <img src="{{ product.pimage1.url }}" id="img">
                     </div>
                     <div class="cel2 ex4">
                         <div>
-                            <p><a href="" id="sony">SONY Alpha Full Frame ILCE-7M2K/BQ IN5 Mirrorless Cam...</a></p>
+                            <p><a href="" id="sony">{{product.title}}</a></p>
                             <div class="red"><p>Black</p></div>
                             <div class="ex3">
                         
-                                <div><p id="ex1">Seller:CORSECA</p></div>
+                                <!-- <div><p id="ex1">Seller:CORSECA</p></div>
                                 <div><img src="{% static 'images/flip.png' %}"></div>
-                                
+                                 -->
                             </div> 
                             <div>
-                                <span class="_2-ut7f _2xc6hH">₹1,28,990</span>
-                                <span class="_2-ut7f _1WpvJ7">₹85,999</span>
+                                <!-- <span class="_2-ut7f _2xc6hH">₹1,28,990</span> -->
+                                <span class="_2-ut7f _1WpvJ7">{{item.price}}</span>
                                 <span class="dML6Ak">33% Off</span>
                                 <div class="_3zPVJV"><div class="ebO6Mt" id="offers-LSTDLLF6QZPNKTQMS8JPI2J50">2 offers applied<svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" class="_3GN0Y0"><g fill="none"><path d="M-1-1h16v16H-1"></path><path d="M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm.7 10.5H6.3V6.3h1.4v4.2zm0-5.6H6.3V3.5h1.4v1.4z" fill="#388e3c" class=""></path></g></svg></div></div>
                             </div>          
@@ -91,17 +95,20 @@
                     
                     </div>
                 </div>
+                    
                 <div class="des xxx">
-                    <div><button class="no1"> – </button></div>
+                    <!-- <div><button class="no1"> – </button></div> -->
                     <div class="">
-                        <input type="text" class="_253qQJ" value="1">
+                        <!-- <input type="number" class="_253qQJ" value="1"> -->{{ item.quantity }}
                     </div>
-                    <div>
+                    <!-- <div>
                         <button class="no1"> + </button></button>
-                    </div>
+                    </div> -->
                     
                     <div class="sav"><a href="">Remove</a></div>
                 </div>
+                    {% endwith %}
+                {% endfor %}
             </div>
             <div class="cat">
                 <div class="ex4">
