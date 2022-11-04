@@ -25,9 +25,9 @@
   height: 10%;
   padding-bottom: 15px;
  }
- /* .center img{
-margin-left: 100px;
- } */
+ .center img{
+margin:0 auto;
+ }
 
 .res{
   padding-top: 10px;
@@ -45,7 +45,7 @@ margin-left: 100px;
   min-width: 180px;
   font-size: 16px;
   font-weight: 500;
-  margin-top: 11px;
+  margin-top: 12px;
 
 }
 

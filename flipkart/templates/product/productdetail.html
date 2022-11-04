@@ -60,7 +60,7 @@
     <div class="row">
 
 
-     
+        <p class="col-1"></p>
                 <a class="col-4 res"  href="{% url 'cart'  %}"> 
            <div >
             <form action="{% url 'cart_add' productdetail.id %} " method="post" >
@@ -73,9 +73,9 @@
                <button id="place1">ADD TO CART</button>
           
             </div></a>
-            <p class="col-2"></p>
+            <p class="col-1"></p>
             
-            <a class="col-4 res ponse" href="{% url 'cart' %}">     <div >
+            <a class="col-5 res ponse" href="{% url 'cart' %}">     <div >
                 <span class="_3iRXzi"></span>
                 <br>
                 <button id="place">ORDER NOW</button>
@@ -84,7 +84,7 @@
     </div>
 </div>
 <div class=" container-fluid col-12 col-lg-7 col-mg-12" >
-    <p>Home > Mobiles & Accessories >Mobiles >SAMSUNG Mobiles
+    <p>Home > Mobiles & Accessories >Mobiles > {{productdetail.companybname}} Mobiles
        > {{productdetail.title}}</p>
        <h4>{{productdetail.title}}</h4>
      <div class="rat">
