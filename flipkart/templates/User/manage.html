@@ -30,7 +30,7 @@
                                 </div>
                                 <ul class="all marginbox">
                                     <li><a href="{% url 'profile' %}" class="non cd">Profile Information</a></li>
-                                    <li><a href="manage.html" class="non">Manage Address</a></li>
+                                    <li><a href="#" class="non">Manage Address</a></li>
                                     <li><a href="#" class="non cd">PAN Card information</a></li>
                                 </ul>
                             </div>
@@ -66,95 +66,93 @@
                     </div>
                 </div>
             </div>
-        <!-- <div class="bor1 col-lg-7">
-            <h5 class="and">Manage Address</h5>
-            <div class="bom">
-                <a href="#"><i class="fa-solid fa-plus me-3"></i>ADD A NEW ADDRESS</a>
-            </div>
-            <div class="bom2">
-                <p class="boxo">Home</p>
-                <div class="flex">
-                    <div><p class="me-3">Your Name</p></div>
-                    <div><p>9128908932</p></div>
-                </div>
-                <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Quia error, consectetur ipsa possimus delectus voluptates nostrum praesentium </p></div>
-            </div>
-        </div> -->
-        <div class="accordion accordion-flush bor1 col-lg-7" id="accordionFlushExample">
-            <h5 class="and">Manage Address</h5>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <a href="#"><i class="fa-solid fa-plus me-3"></i>ADD A NEW ADDRESS</a>
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    <form class="allin boxin" action="" method="POST">
-                        <div class="container bor cont">
-                            <div class="margino">
-                                <b class="me-3">ADD A NEW ADDRESS</b><a class="rem non" href="">Edit</a>
-                            </div>
-                            <div class="col margi">
-                                <label for="uname"></label>
-                                <input type="text" placeholder="Name" name="Name" required>
-            
-                                <label for="Phone"></label>
-                                <input type="text" placeholder="Phone Number" name="Phone Number" required>
+            <div class="accordion accordion-flush bor1 col-lg-7" id="accordionFlushExample">
+                <h5 class="and">Manage Address</h5>
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <a href="#" class="non"><i class="fa-solid fa-plus me-3"></i>ADD A NEW ADDRESS</a>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <form class="allin boxin" action="" method="POST">
+                            {% csrf_token %}
+                            <div class="container bor cont">
+                                <div class="margino">
+                                    <b class="me-3">ADD A NEW ADDRESS</b><a class="rem non" href="">Edit</a>
+                                </div>
+                                <div class="col margi">
+                                    <label for="uname"></label>
+                                    {{form.username}}
+                                    <!-- <input type="text" placeholder="Name" name="Name" required> -->
+                
+                                    <label for="Phone"></label>
+                                    {{form.phone}}
+                                    <!-- <input type="text" placeholder="Phone Number" name="Phone Number" required> -->
 
-                            </div>
-                            <div class="col margi">
-                                <label for="pcode"></label>
-                                <input type="text" placeholder="Pin Code" name="Pin Code" required>
-            
-                                <label for="loc"></label>
-                                <input type="text" placeholder="Locality" name="Locality" required>
-                            </div>
-                            <div class="col margi">
-                                <label for="uname"></label>
-                                <input class="wid" type="text" placeholder="Address (area and street)" name="Address (area and street)" required>
-                            </div>
-                            <div class="col margi">
-                                <label for="dis"></label>
-                                <input type="text" placeholder="City/District/Town" name="First Name" required>
-            
-                                <label for="sat"></label>
-                                <input type="text" placeholder="State" name="State" required>
+                                </div>
+                                <div class="col margi">
+                                    <label for="pcode"></label>
+                                    {{form.pcode}}
+                                    <!-- <input type="text" placeholder="Pin Code" name="Pin Code" required> -->
+                
+                                    <label for="loc"></label>
+                                    {{form.locality}}
+                                    <!-- <input type="text" placeholder="Locality" name="Locality" required> -->
+                                </div>
+                                <div class="col margi ">
+                                    <label for="uname"></label>
+                                    {{form.address}}
+                                    <!-- <input class="wid" type="text" placeholder="Address (area and street)" name="Address (area and street)" required> -->
+                                </div>
+                                <div class="col margi">
+                                    <label for="dis"></label>
+                                    {{form.area}}
+                                    <!-- <input type="text" placeholder="City/District/Town" name="First Name" required> -->
+                
+                                    <label for="sat"></label>
+                                    {{form.state}}
+                                    <!-- <input type="text" placeholder="State" name="State" required> -->
 
-                            </div>
-                            <div class="col margi">
-                                <label for="land"></label>
-                                <input type="text" placeholder="Land Mark (Optional)" name="Land Mark" required>
-            
-                                <label for="alt"></label>
-                                <input type="text" placeholder="Alternate Phone (Optional)" name="Alternate Phone" required>
+                                </div>
+                                <div class="col margi">
+                                    <label for="land"></label>
+                                    {{form.landmark}}
+                                    <!-- <input type="text" placeholder="Land Mark (Optional)" name="Land Mark" required> -->
+                
+                                    <label for="alt"></label>
+                                    {{form.anotherphone}}
+                                    <!-- <input type="text" placeholder="Alternate Phone (Optional)" name="Alternate Phone" required> -->
 
+                                </div>
+                                <!-- <div class="margi">
+                                    <p>Address Type</p>
+                                    <input type="radio" name="gender" value="male"> Home
+                                    <input type="radio" name="gender" value="female"> Work
+                                </div> -->
+                                <div class="col">
+                                    <input type="submit" class="bak" name="" id="">
+                                    <button class="no">Cancel</button>
+                                </div>
                             </div>
-                            <div class="margi">
-                                <p>Address Type</p>
-                                <input type="radio" name="gender" value="male"> Home
-                                <input type="radio" name="gender" value="female"> Work
-                            </div>
-                            <div class="col">
-                                <button class="bak">Save</button>
-                                <button class="no">Cancel</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="bom2">
-                <p class="boxo">Home</p>
-                <div class="flex">
-                    <div><p class="me-3">Your Name</p></div>
-                    <div><p>9128908932</p></div>
                 </div>
-                <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Quia error, consectetur ipsa possimus delectus voluptates nostrum praesentium </p></div>
+                <div class="bom2">
+                    <p class="boxo">Home</p>
+                    <div class="flex">
+                
+                        <div><p class="me-3">{{request.user.username}}</p></div>
+                        <div><p>{{detail.user.phone}}</p></div>
+                    </div>
+                    <div><p>{{detail.user.address}}</p></div>
+                </div>
             </div>
+            
+    
         </div>
-          
-    </div>
-</section>
+    </section>
 
-{% endblock %}
+    {% endblock %}

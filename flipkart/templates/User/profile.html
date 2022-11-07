@@ -69,29 +69,38 @@
         
         <div class="inter bor col-lg-7 ">
             <form class="allin boxin" action="" method="POST">
+                {% csrf_token %}
                 <div class="container bor cont">
                     <div class="margino">
                         <b class="me-3">Personal Information</b><a class="rem non" href="">Edit</a>
                     </div>
+                    <div>
                     <div class="col margino">
                         <label for="uname"></label>
-                        <input type="text" placeholder="First Name" name="First Name" required>
+                        {{form.first_name}}
+                        <!-- <input type="text" placeholder="First Name" name="First Name" required> -->
     
                         <label for="uname"></label>
-                        <input type="text" placeholder="Last Name" name="Last name" required>
+                        {{form.last_name}}
+                        <!-- <input type="text" placeholder="Last Name" name="Last name" required> -->
                     </div>
-                    <div class="margino">
+                    <!-- <div class="margino">
                         <p>Your Gender?</p>
                         <input type="radio" name="gender" value="male"> Male
                         <input type="radio" name="gender" value="female"> Female
-                    </div>
-                    <div class="margino row width">
+                    </div> -->
+                    <div class="margino row width map">
                         <label for="Email"><b class="me-3">Email Address</b><a class="me-3 rem non" href="">Edit</a><a class="rem non" href="">Change</a></label>
-                        <input type="text" placeholder="Email Address" name="Email Address" required>
+                        {{form.email}}
+                        <!-- <input type="text" placeholder="Email Address" name="Email Address" required> -->
                     </div>
-                    <div class="margino row width">
+                    <div class="margino row width map">
                         <label for="number"><b class="me-3">Mobile Number</b><a class="rem non" href="">Edit</a></label>
-                        <input type="text" placeholder="Mobile Number" name="Mobile Number" required>
+                        {{form.phone}}
+                        <!-- <input type="text" placeholder="Mobile Number" name="Mobile Number" > -->
+                    </div>
+                    <div class="col margino">
+                        <input type="submit" class="bak" name="" id="">
                     </div>
                     <span class="margino">
                         <h5 class="margino">FAQs</h5>

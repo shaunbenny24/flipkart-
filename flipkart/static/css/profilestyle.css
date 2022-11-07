@@ -18,7 +18,9 @@
 .marginbox{
     margin-bottom: 20px;
 }
-
+.map{
+    margin-left: 3px;
+}
 .flex{
     display: flex;
 }
