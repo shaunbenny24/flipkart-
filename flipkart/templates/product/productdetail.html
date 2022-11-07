@@ -61,7 +61,7 @@
 
 
      
-                <a class="col-4 res"  href="{% url 'cart'  %}"> 
+            <a class="col-4 res"  href="{% url 'cart'  %}"> 
            <div >
             <form action="{% url 'cart_add' productdetail.id %} " method="post" >
                 {{ cart_product_form }}
