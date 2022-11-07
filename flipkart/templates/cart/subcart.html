@@ -82,7 +82,7 @@
                             </div> 
                             <div>
                                 <!-- <span class="_2-ut7f _2xc6hH">₹1,28,990</span> -->
-                                <span class="_2-ut7f _1WpvJ7">{{item.price}}</span>
+                                <span class="_2-ut7f _1WpvJ7">₹{{item.total_price}}</span>
                                 <span class="dML6Ak">33% Off</span>
                                 <div class="_3zPVJV"><div class="ebO6Mt" id="offers-LSTDLLF6QZPNKTQMS8JPI2J50">2 offers applied<svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" class="_3GN0Y0"><g fill="none"><path d="M-1-1h16v16H-1"></path><path d="M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm.7 10.5H6.3V6.3h1.4v4.2zm0-5.6H6.3V3.5h1.4v1.4z" fill="#388e3c" class=""></path></g></svg></div></div>
                             </div>          
@@ -99,7 +99,9 @@
                 <div class="des xxx">
                     <!-- <div><button class="no1"> – </button></div> -->
                     <div class="">
-                        <!-- <input type="number" class="_253qQJ" value="1"> -->{{ item.quantity }}
+                        {{ item.quantity }}
+                        
+                        
                     </div>
                     <!-- <div>
                         <button class="no1"> + </button></button>
@@ -165,13 +167,15 @@
                     <p>PRICE DETAILS</p>
                 </div>
             </div>
-            
+            {% with total_items=cart|length %}
+                {% if total_items > 0 %}
+                <a href="{% url 'cart_detail' %}"></a>
             <div class="flex">
                 <div>
-                    <p>Price (1 item)</p>
+                    <p>Price ({{ total_items }}{{ total_item| pluralize }})</p>
                 </div>
                 <div class="numb1">
-                    ₹1,28,990
+                    ₹{{ cart.get_total_price}}
                 </div>
             </div>
             <div class="flex">
@@ -195,7 +199,7 @@
                     <b>Total Amount</b>
                 </div>
                 <div class="numb1">
-                    ₹85,999
+                    ₹{{ cart.get_total_price}}
                 </div>
             </div>
             <div id="gol">
@@ -212,7 +216,11 @@
             
             
         </div>
-    </div>   
+    </div>
+    {% else %}
+                Your cart is empty.
+            {% endif %}
+        {% endwith %}   
 </section>
 <div class="sec">
     <div class="des">

@@ -82,7 +82,22 @@
             </div>
             <div class="mt-2 text-white">Become a Seller</div>
             <div class="mt-2 text-white">More</div>
-            <div class="mt-2 text-white"><i class="fa-solid fa-cart-shopping me-2"></i>Cart</div>
+            <!-- <div class="mt-2 text-white"><i class="fa-solid fa-cart-shopping me-2"></i>Cart</div> -->
+            <div class="mt-2 text-white">
+            <a href="{% url 'cart_detail' %}" class="  position-relative">
+                <i class="fa-solid fa-cart-shopping text-white me-2"></i>
+                {% with total_items=cart|length %}
+                {% if total_items > 0 %}
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{ total_items }}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+                {% else %}
+                            Your cart is empty.
+                        {% endif %}
+                    {% endwith %}
+            </a>
+        </div>
         </div>
     </div>
     </div>
