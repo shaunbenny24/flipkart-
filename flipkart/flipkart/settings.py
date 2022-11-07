@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'cart.context_processors.cart'
             ],
         },
     },
@@ -143,3 +144,4 @@ ACCOUNT_SID= 'AC48adeeb32523417803490d69cfd5f4ed'
 AUTH_TOKEN= '85e4b9b102f8aaf56505a2fc77a38efc'
 
 AUTH_USER_MODEL = 'account.UserProfile'
+CART_SESSION_ID = 'cart'

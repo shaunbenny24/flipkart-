@@ -3,46 +3,17 @@
 {% block content%}
 <section class="categories mt-4">
     <div class="container-fluid">
-        <div class="d-flex text-center justify-content-between">
-            <div><img src="{% static 'img/home/topoffers.png' %}" alt="">
-            <p><a href="">Top Offers</a></p>
-            </div>
-           <div>
-            <img src="{% static 'img/home/mobile&tab.png' %}" alt="">
-            <p><a href="">Mobiles</a></p>
-           </div>
-            <div>
-                <img src="{% static 'img/home/electronics.png' %}" alt="">
-                <p><a href="">Electronics</a></p>
-            </div>
-            <div>
-                <img src="{% static 'img/home/tv&appliances.png' %}" alt="">
-                <p><a href="">Appliances</a></p>
-            </div>
-            <div>
-                <img src="{% static 'img/home/fashion.png' %}" alt="">
-                <p><a href="">Fashion</a></p>
-            </div>
-            <div>
-                <img src="{% static 'img/home/beauty.webp' %}" alt="">
-                <p><a href="">Beauty and Toys</a></p>
-            </div>
-            <div>
-              <img src="{% static 'img/home/grocery.png' %}" alt="">
-              <p><a href="">Grocery</a></p>
-          </div>
-            <div>
-                <img src="{% static 'img/home/home.jpg' %}" alt="">
-                <p><a href="">Home</a></p>
-            </div>
-            <div>
-                <img src="{% static 'img/home/travel.webp' %}" alt="">
-                <p><a href="">Travel</a></p>
-            </div>
-            <div>
-              <img src="{% static 'img/home/two_wheel.webp' %}" alt="">
-              <p><a href="">2-Wheelers</a></p>
-          </div>
+       
+          {% for Categories in categorys %}
+          <div class="d-flex text-center justify-content-between">
+            <a href="{%url 'product' Categories.pk %}">
+              <div><img src="{{Categories.image.url}}" alt="">
+              <p>{{Categories.title}}</p></a>
+              </div>
+  
+              {% endfor %}
+              
+              
         </div>
     </div>
    </section>
@@ -82,150 +53,26 @@
       </div>
       <div class="mt-4">
        <div class="row">
+             
+        {% for product in products %}
+    
         <div class="col-lg-2 col-4 mt-4">
           <div class="text-center all_product" >
-            <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-              <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
+            <a class="none" href="{% url 'productdetail' product.pk %}">
+            <img src="{{product.pimage1.url}}" width="75%;" class="img-fluid" alt="...">
+              <p class="mt-3">{{product.title}}</p>
               <div class="d-flex justify-content-center">
                 <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
               </div>
-              <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
+              <p class="price mt-2"><strong>₹{{product.price}}&nbsp;</strong>
+                <span class="text-decoration-line-through text-secondary"> ₹{{product.disprice}}</span>
                 <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
           </div>
-        </div>
-        <div class="col-lg-2 col-4 mt-4">
-          <div class="text-center all_product" >
-            <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-              <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-              <div class="d-flex justify-content-center">
-                <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-              </div>
-              <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-          </div>
-        </div>
-        <div class="col-lg-2 col-4 mt-4">
-          <div class="text-center all_product" >
-            <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-              <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-              <div class="d-flex justify-content-center">
-                <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-              </div>
-              <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-          </div>
-        </div>
-        <div class="col-lg-2 col-4 mt-4">
-          <div class="text-center all_product" >
-            <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-              <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-              <div class="d-flex justify-content-center">
-                <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-              </div>
-              <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-          </div>
-        </div>
-        <div class="col-lg-2 col-4 mt-4">
-          <div class="text-center all_product" >
-            <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-              <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-              <div class="d-flex justify-content-center">
-                <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-              </div>
-              <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-          </div>
-        </div>
-        <div class="col-lg-2 col-4 mt-4">
-          <div class="text-center all_product" >
-            <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-              <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-              <div class="d-flex justify-content-center">
-                <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-              </div>
-              <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-          </div>
-        </div>
-        <div class="col-lg-2 col-4 mt-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mt-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mt-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mt-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mt-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-4 mt-4">
-            <div class="text-center all_product" >
-              <img src="{% static 'img/home/product1.webp' %}" width="75%;" class="img-fluid" alt="...">
-                <p class="mt-3">Gifteria Sitting Panda with Baby - 55 cm</p>
-                <div class="d-flex justify-content-center">
-                  <div class="rating_tag"><b>4.2</b> <i class="fa-sharp fa-solid fa-star" style="font-size: 10px;"></i> </div>
-                </div>
-                <p class="price mt-2"><strong>₹439 &nbsp;</strong>
-                  <span class="text-decoration-line-through text-secondary"> ₹1,299</span>
-                  <span style="font-size: 14px;" class="text-success ">&nbsp; 66% off</span></p>
-            </div>
-          </div>
+         </div></a>
+
+         {% endfor %}
+         
+         
        </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ class Category(models.Model):
     image = models.ImageField()
   
 
-    def _str_(self):
+    def __str__(self):
         return self.title
 
 
@@ -30,7 +30,7 @@ class Product(models.Model):
     Category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
 
-    def _str_(self):
+    def __str__(self):
         return self.title
 
 

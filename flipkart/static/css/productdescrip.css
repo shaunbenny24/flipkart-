@@ -23,9 +23,10 @@
  .ismall img{
   width: 80%;
   height: 10%;
+  padding-bottom: 15px;
  }
  .center img{
-margin-left: 100px;
+margin:0 auto;
  }
 
 .res{
@@ -44,9 +45,10 @@ margin-left: 100px;
   min-width: 180px;
   font-size: 16px;
   font-weight: 500;
-
+  margin-top: 12px;
 
 }
+
 #place1{
 
   background: #ff9f00;
