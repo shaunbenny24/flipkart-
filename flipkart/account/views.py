@@ -19,6 +19,7 @@ def register_view(request):
     if request.method == 'POST':
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         phone_number=request.POST.get('phone_number')
         # form = LoginForm(request.POST)
         
@@ -30,6 +31,8 @@ def register_view(request):
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         # phone_number=request.POST.get('phone_number')
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -39,6 +42,9 @@ def register_view(request):
             print('---------')
             return redirect('login')
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -65,6 +71,7 @@ def login_view(request):
     return render(request, 'base.html')
 
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 # def otp(request, uid):
@@ -95,6 +102,8 @@ def otp(request, uid):
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 def otp(request, uid):
 
     if request.method == 'POST':
@@ -120,6 +129,9 @@ def otp(request, uid):
 #             return redirect(f'/otp/{uid}')
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

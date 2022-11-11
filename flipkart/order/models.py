@@ -1,6 +1,7 @@
 from django.db import models
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 from customer.models import Address,Personal_information,UserProfile
 from product.models import Product
 from account.models import UserProfile
@@ -52,12 +53,17 @@ class OrderItem(models.Model):
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 from customer.models 
 # Create your models here.
 
 class Order(models.Model):
     address=
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
