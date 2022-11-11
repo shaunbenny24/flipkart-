@@ -17,6 +17,7 @@ import json
 def register_view(request):
     form = LoginForm()
     if request.method == 'POST':
+<<<<<<< Updated upstream
         phone_number=request.POST.get('phone_number')
         # form = LoginForm(request.POST)
         
@@ -25,6 +26,16 @@ def register_view(request):
         user.save()
         print('---------')
         return redirect('login')
+=======
+        # phone_number=request.POST.get('phone_number')
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            phone_number = form.cleaned_data.get("phone")
+            user = UserProfile.objects.create(phone=phone_number)
+            user.save()
+            print('---------')
+            return redirect('login')
+>>>>>>> Stashed changes
     return render(request, 'base.html', {'form': form})
 
 
@@ -48,6 +59,7 @@ def login_view(request):
     return render(request, 'base.html')
 
 
+<<<<<<< Updated upstream
 # def otp(request, uid):
 
 #     if request.method == 'POST':
@@ -73,6 +85,32 @@ def otp(request, uid):
             return redirect(f'/otp/{uid}')
     else:
         return render(request, 'base.html', {'uid': uid})
+=======
+def otp(request, uid):
+
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            # otp=request.POST.get('otp')
+            otp = form.cleaned_data.get('otp')
+            profile = UserProfile.objects.get(uid=uid)
+            if otp == profile.otp:
+                login(request, profile)
+                return redirect('/')
+            return redirect(f'/otp/{uid}')
+    form = LoginForm()
+    return render(request, 'base.html', {'form': form, 'uid': uid})
+# def otp(request, uid):
+#     if request.method == 'POST':
+#         otp = request.POST.get('otp')
+#         profile = UserProfile.objects.get(uid=uid)
+#         if otp == profile.otp:
+#             login(request, profile)
+#             return redirect('/')
+#         else:
+#             return redirect(f'/otp/{uid}')
+
+>>>>>>> Stashed changes
 
 def signout(request):
     logout(request)

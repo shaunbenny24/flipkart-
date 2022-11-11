@@ -1,4 +1,5 @@
 from django.db import models
+<<<<<<< Updated upstream
 from customer.models import Address,Personal_information,UserProfile
 from product.models import Product
 from account.models import UserProfile
@@ -47,3 +48,10 @@ class OrderItem(models.Model):
     def order_list(self):
         user=self.order.all()
         my_list=OrderItem.objects.filter()
+=======
+from customer.models 
+# Create your models here.
+
+class Order(models.Model):
+    address=
+>>>>>>> Stashed changes
