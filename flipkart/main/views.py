@@ -10,7 +10,7 @@ def index(request):
     products = Product.objects.all()
     categorys = Category.objects.all()
     cart = Cart(request)
-    print(cart)
+  
     context = {'products':products,'categorys': categorys, 'cart':cart}
     return render(request,'index.html',context)
 

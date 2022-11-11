@@ -22,6 +22,7 @@ def profile(request):
 
 
 def manage(request):
+        
         form = Address()
         if request.method == 'POST':
             form = Address(request.POST)
