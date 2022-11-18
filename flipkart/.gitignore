@@ -4,4 +4,4 @@
 .env
 venv/
 db.sqlite3
-media/
+media/0
