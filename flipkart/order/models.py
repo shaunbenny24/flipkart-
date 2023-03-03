@@ -1,7 +1,4 @@
 from django.db import models
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 from customer.models import Address,Personal_information,UserProfile
 from product.models import Product
 from account.models import UserProfile
@@ -43,27 +40,11 @@ class OrderItem(models.Model):
     
     def __str__(self):
         return f'item is : {self.product.title}'
-
+    @property
     def get_cost(self):
         return self.price * self.quantity
 
     def order_list(self):
         user=self.order.all()
         my_list=OrderItem.objects.filter()
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-from customer.models 
-# Create your models here.
 
-class Order(models.Model):
-    address=
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

@@ -17,9 +17,7 @@ import json
 def register_view(request):
     form = LoginForm()
     if request.method == 'POST':
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
         phone_number=request.POST.get('phone_number')
         # form = LoginForm(request.POST)
         
@@ -28,11 +26,7 @@ def register_view(request):
         user.save()
         print('---------')
         return redirect('login')
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
         # phone_number=request.POST.get('phone_number')
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -41,13 +35,7 @@ def register_view(request):
             user.save()
             print('---------')
             return redirect('login')
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
     return render(request, 'base.html', {'form': form})
 
 
@@ -71,23 +59,7 @@ def login_view(request):
     return render(request, 'base.html')
 
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-# def otp(request, uid):
 
-#     if request.method == 'POST':
-#         form = LoginForm(request.POST)
-#         if form.is_valid():
-#             # otp=request.POST.get('otp')
-#             otp = form.cleaned_data.get('otp')
-#             profile = UserProfile.objects.get(uid=uid)
-#             if otp == profile.otp:
-#                 login(request, profile)
-#                 return redirect('/')
-#             return redirect(f'/otp/{uid}')
-#     form = LoginForm()
-#     return render(request, 'base.html', {'form': form, 'uid': uid})
 def otp(request, uid):
     if request.method == 'POST':
         otp = request.POST.get('otp')
@@ -99,42 +71,9 @@ def otp(request, uid):
             return redirect(f'/otp/{uid}')
     else:
         return render(request, 'base.html', {'uid': uid})
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-def otp(request, uid):
 
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            # otp=request.POST.get('otp')
-            otp = form.cleaned_data.get('otp')
-            profile = UserProfile.objects.get(uid=uid)
-            if otp == profile.otp:
-                login(request, profile)
-                return redirect('/')
-            return redirect(f'/otp/{uid}')
-    form = LoginForm()
-    return render(request, 'base.html', {'form': form, 'uid': uid})
-# def otp(request, uid):
-#     if request.method == 'POST':
-#         otp = request.POST.get('otp')
-#         profile = UserProfile.objects.get(uid=uid)
-#         if otp == profile.otp:
-#             login(request, profile)
-#             return redirect('/')
-#         else:
-#             return redirect(f'/otp/{uid}')
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
 def signout(request):
     logout(request)
@@ -148,10 +87,11 @@ def signin(request):
             profile = UserProfile.objects.get(phone=phone_number)
             num_gen = random.randint(1000, 9999)
             profile.otp = num_gen
+            print('otp is : ', profile.otp)
             profile.save()
             # message_handler=MessageHandler(phone_number,profile.otp)
             # message_handler.send_otp_on_phone()
-            print('otp is : ', profile.otp)
+            
             # return JsonResponse({'uid':uid})
             # return redirect(f'/account/otp/{profile.uid}')
 

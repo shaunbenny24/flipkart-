@@ -8,8 +8,12 @@ def order_list(request):
     user= request.user
     order_list = Order.objects.filter(user=user)
     items=OrderItem.objects.filter(order__in=order_list)
-   
-    return render(request,'order/order_list.html',{'items':items})
+    cart=Cart(request)
+    context={
+        'items':items,
+        'cart':cart
+        }
+    return render(request,'order/order_list.html',context)
    
 
 def order_details(request):
