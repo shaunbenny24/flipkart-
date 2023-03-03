@@ -1,7 +1,38 @@
-# ignore ALL .log files
+
+# Created by sabeel
+
+.DS_Store
+._*
+### Django ###
+*.log
+*.pot
 *.pyc
-.venv/
-.env
-venv/
+__pycache__/
+*/__pycache__/
+*/media_root/
+*/*/__pycache__/
+
+migrations/*.py
+*/migrations/*.py
+*/*/migrations/*.py
+
+!migrations/__init__.py
+!*/migrations/__init__.py
+!*/*/migrations/__init__.py
+
+local_settings.py
 db.sqlite3
-media/0
+db.sqlite3-journal
+media/
+media_root/
+
+# Environments
+.env
+.venv
+env/
+venv/
+credentials.py
+.vscode
+.git_credentials
+settings.py
+/.idea/
