@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
 ]
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

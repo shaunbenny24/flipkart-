@@ -130,7 +130,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="container">
-                    <form class="loginform" id="task-form" action="{% url 'login' %}"  method="post">
+                 
+                    <form class="loginform" id="task-form" action="{% url 'login'  %}"  method="post">
+                     
                         {% csrf_token%}
                         <div class="mt-5">
                             <input  type="text" id="phone" name="phone_number" placeholder="Enter Email/Mobile Number">
@@ -146,13 +148,14 @@
                         <div class="mt-5 mb-4">
                             <button type="submit">Login</button>
                         </div>
-                        <!-- <div class="mt-5 mb-4 text-center">
+                        <div class="mt-5 mb-4 text-center">
                             <a  class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" href="">New to Flipkart? Create an account</a>
-                        </div> -->
+                        </div>
                         <div class="mt-5 mb-4 text-center">
                             <a  class="" data-bs-toggle="modal" data-bs-target="#exampleModal3" href="">OTP</a>
                         </div>
                     </form> 
+                   
                 </div>
             </div>
         </div>
@@ -190,8 +193,8 @@
                     <form class="loginform" action="{% url 'register' %}" method="post">
                         {% csrf_token %}
                         <div class="mt-5">
-                            <!-- <input type="text" placeholder="Enter Phonenumber" name="phone_number"> -->
-                            {{form.phone}}
+                            <input type="text" placeholder="Enter Phonenumber" name="phone_number">
+                           
                         </div>
                         <!-- <div class="mt-5">
                             <input  type="text" placeholder="OTP">
@@ -243,22 +246,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="container">
-                    <!-- {% if uid %} -->
-                    <form class="loginform" action="{% url 'otp' uid  %}" method="post">
-                    <!-- {% else %}
-                    <form class="loginform" action="{% url 'otp' 123 %}" method="post"> -->
-                    <!-- {% endif %} -->
+                    {% if uid %}
+                    <form class="loginform" action="{% url 'otp' uid %}" method="post">
+    {% endif %}
                         {% csrf_token %}
                         <div class="mt-5">
-                            <!-- <input type="text" placeholder="Enter Phonenumber" name="phone_number"> -->
-                            {{form.otp}}
+                            <input type="text" placeholder="Enter OTP" name="otp">
+                           
                         </div>
-                        <!-- <div class="mt-5">
-                            <input  type="text" placeholder="OTP">
-                        </div> -->
-                        <!-- <div class="mt-5">
-                            <input  type="text" placeholder="Enter Password">
-                        </div> -->
                         <div class="mt-5">
                             <p><span class="text-secondary">By continuing, you agree to Flipkart's</span> <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a></p>
                         </div>
@@ -374,7 +369,7 @@
                   <li>Press</li>
                   <li>Flipcart Wholesale</li>
                   <li>Corporate Information</li>
-              </ul>
+              </ul>method="post"
               </div>
           </div>
           <div class="col-lg-2 col-6">
@@ -463,7 +458,7 @@ Telephone: <span class="text-primary">044-45614700</span>
           </div>
       </div>
   </div>
-  <div class="mt-5 mb-4" style="height: 1px;width: 100%; background: #555;"></div>
+  <div class="mt-5 mb-4" style="height: 1px;width: 100%; background-color: #555;"></div>
   <div class="container">
       <div class="flex-column-none d-lg-flex bottom_footer justify-content-between ps-4 ">
           <p class="mt-3"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTJoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuOTMgNS42MTRoLTIuOTQ4VjQuMTRjMC0uODE4LS42NTUtMS40NzMtMS40NzMtMS40NzNIOC41NmMtLjgxNyAwLTEuNDczLjY1NS0xLjQ3MyAxLjQ3M3YxLjQ3NEg0LjE0Yy0uODE4IDAtMS40NjYuNjU2LTEuNDY2IDEuNDc0bC0uMDA3IDguMTA1YzAgLjgxOC42NTUgMS40NzQgMS40NzMgMS40NzRoMTEuNzljLjgxOCAwIDEuNDc0LS42NTYgMS40NzQtMS40NzRWNy4wODhjMC0uODE4LS42NTYtMS40NzQtMS40NzQtMS40NzR6bS00LjQyMSAwSDguNTZWNC4xNGgyLjk0OHYxLjQ3NHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yIC0yKSIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">
@@ -484,23 +479,28 @@ Telephone: <span class="text-primary">044-45614700</span>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+<!-- <script>
+    $(document).on('submit', '#task-form',function(e){
+    $.ajax({
+        type:'POST',
+        url:'{% url "login" %}',
+        data:{
+            title:$('#phone').val(),
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+            action: 'post'
+        },
+        success:function(json){
+            document.getElementById("task-form").reset();
+            $(".loginform").prepend('<div class="mt-5">'+ json.otp + '</div>' +
+                        json.description 
+            )
+        },
+        error : function(xhr,errmsg,err) {
+        console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+    }
+    });
+});
 
-<!-- <script type="text/javascript">
-    $(document).on('submit','#task-form',function(e){
-        e.preventDefault();
-        $.ajax({
-            type:'POST',
-            url:'{% url "login" %}',
-            data:
-            {
-                phone:$("#phone").val(),
-                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-            },
-            success:function(data){
-                $('#msgs').html(data)
-                    }
-            })
-        });
-    </script> -->
+</script> -->
 </body>
 </html>

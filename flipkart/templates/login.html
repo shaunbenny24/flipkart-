@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+</head>
+<body>
+	<form method="post" id="task-form">
+		{% csrf_token %}
+		<input type="text" placeholder="Enter Mobile" name="phone" id="phone" >
+		<button type="submit">Login</button>
+	</form>
+	
+	<form  action="{% url 'otp'  %}" method="post" id="">
+		
+		{% csrf_token %} 
+		<input type="text" placeholder="Enter OTP" name="otp" id="otp" >
+		<button type="submit">Login</button>
+	</form>
+
+  <div id="newid"><h2>Welcome to Jqeury</h2></div>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+	$("#task-form").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			type:'POST',
+			url:'{% url "login" %}',
+			data:
+			{
+				phone:$("#phone").val(),
+				csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+			},
+			success:function(){
+				$("#newid").html(result);
+					}
+			})
+		});
+	</script>
+
+</body>
+</html>

@@ -82,85 +82,32 @@
                 </form>
             </div>
             <!-- orders list-->
+            {% for item in items %}
             <div class="odr_prouct mt-2  pe-5 pt-3  border rounded-2 mb-3">
                 <div class="row">
                     <div class="col-md-12 col-1"></div>
-                    <div class="col-md-2 col-2  text-end"><img class=""src="{% static 'img/order/order1.jpeg' %}" alt=""></div>
+                    <div class="col-md-2 col-2  text-end"><img class=""src="{{item.product.pimage1.url}}" alt=""></div>
                     <div class="col-md-3 col-4">
-                        <p>POCO M3 (Power Black, 64 GB)</p> 
+                        <p><a class="text-decoration-none" href="{% url 'order_details' %}">{{item.product.title}}</a></p> 
                         <span class="d-none d-md-block">Color : Black</span>
                     </div>
                     <div class="col-3 d-none d-md-block text-center">
-                        <p>₹11,499</p>
+                     <p>{{item.quantity}} x {{item.product.price}} </p><p>₹{{item.get_cost}}</p>
                     </div>
                     <div class="col-md-3 col-5">
-                        <p><strong><i class="fa-solid fa-circle text-success me-2" style="font-size: 10px;"></i>Delivered on Jul 28, 2021</strong></p>  
+                        <p><strong><i class="fa-solid fa-circle text-success me-2" style="font-size: 10px;"></i>{{item.status}}</strong></p>  
                         <span class="text-dark d-none d-md-block">Your item has been delivered</span> 
                        <p class="mt-2"><a href="" class="text-decoration-none"><i class="fa-sharp fa-solid fa-star" style="font-size: 13px;"></i> Rate & Review Product</a></p>
                     </div>
                 </div>
             </div>
-
-            <div class="odr_prouct mt-2 ps-1 pe-5 pt-3  border rounded-2 mb-3">
-                <div class="row">
-                    <div class="col-md-12 col-1"></div>
-                    <div class="col-md-2 col-2  text-end"><img class=""src="{% static 'img/order/order1.jpeg' %}" alt=""></div>
-                    <div class="col-md-3 col-4">
-                        <p>POCO M3 (Power Black, 64 GB)</p> 
-                        <span class="d-none d-md-block">Color : Black</span>
-                    </div>
-                    <div class="col-3 d-none d-md-block text-center">
-                        <p>₹11,499</p>
-                    </div>
-                    <div class="col-md-3 col-5">
-                        <p><strong><i class="fa-solid fa-circle text-success me-2" style="font-size: 10px;"></i>Delivered on Jul 28, 2021</strong></p>  
-                        <span class="text-dark d-none d-md-block">Your item has been delivered</span> 
-                       <p class="mt-2"><a href="" class="text-decoration-none"><i class="fa-sharp fa-solid fa-star" style="font-size: 13px;"></i> Rate & Review Product</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="odr_prouct mt-2 ps-1 pe-5 pt-3  border rounded-2 mb-3">
-                <div class="row">
-                    <div class="col-md-12 col-1"></div>
-                    <div class="col-md-2 col-2  text-end"><img class=""src="{% static 'img/order/order1.jpeg' %}" alt=""></div>
-                    <div class="col-md-3 col-4">
-                        <p>POCO M3 (Power Black, 64 GB)</p> 
-                        <span class="d-none d-md-block">Color : Black</span>
-                    </div>
-                    <div class="col-3 d-none d-md-block text-center">
-                        <p>₹11,499</p>
-                    </div>
-                    <div class="col-md-3 col-5">
-                        <p><strong><i class="fa-solid fa-circle text-success me-2" style="font-size: 10px;"></i>Delivered on Jul 28, 2021</strong></p>  
-                        <span class="text-dark d-none d-md-block">Your item has been delivered</span> 
-                       <p class="mt-2"><a href="" class="text-decoration-none"><i class="fa-sharp fa-solid fa-star" style="font-size: 13px;"></i> Rate & Review Product</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="odr_prouct mt-2 ps-1 pe-5 pt-3  border rounded-2 mb-3">
-                <div class="row">
-                    <div class="col-md-12 col-1"></div>
-                    <div class="col-md-2 col-2  text-end"><img class=""src="{% static 'img/order/order1.jpeg' %}" alt=""></div>
-                    <div class="col-md-3 col-4">
-                        <p>POCO M3 (Power Black, 64 GB)</p> 
-                        <span class="d-none d-md-block">Color : Black</span>
-                    </div>
-                    <div class="col-3 d-none d-md-block text-center">
-                        <p>₹11,499</p>
-                    </div>
-                    <div class="col-md-3 col-5">
-                        <p><strong><i class="fa-solid fa-circle text-success me-2" style="font-size: 10px;"></i>Delivered on Jul 28, 2021</strong></p>  
-                        <span class="text-dark d-none d-md-block">Your item has been delivered</span> 
-                       <p class="mt-2"><a href="" class="text-decoration-none"><i class="fa-sharp fa-solid fa-star" style="font-size: 13px;"></i> Rate & Review Product</a></p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+           
             <!-- end orders list -->
         </div>
         <!-- end right content -->
     </div>
 </div>
 </section>
+
 {% endblock %}
